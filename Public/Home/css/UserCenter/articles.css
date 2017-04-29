@@ -1,0 +1,36 @@
+/*用户中心文章页面样式表*/
+
+.article_list {
+    width: 850px;
+    border-width: 1px 0px;
+    border-color: lightgray;
+    border-style: solid;
+    padding: 5px;
+    float: right;
+}
+
+.article_list li {
+    margin-bottom: 30px;
+}
+
+.title {
+    float: left;
+    font-size: 15px;
+    color: black;
+    background-color: lightgray;
+    padding: 3px;
+}
+
+.view, .create_time {
+    float: right;
+    margin-right: 15px;
+}
+
+.article_list div {
+    margin-bottom: 10px;
+}
+
+.description {
+    clear: both;
+    color: black;
+}

@@ -1,0 +1,66 @@
+/*首页样式表*/
+
+.article_type_list span {
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.article_type_list ul {
+    float: left;
+}
+.article_type_list li {
+    display: inline-block;
+}
+
+.article_type_list a {
+    border: 1px solid gray;
+    padding: 10px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.article_type_list a:hover {
+    color: white;
+    background-color: lightgray;
+}
+
+.publish_article {
+    float: right;
+    margin-right: 150px;
+}
+
+.publish_article a {
+    display: block;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.publish_article a:hover {
+    color: black;
+    background-color: gray;
+    border-color: lightgrey;
+}
+
+.article_list {
+    margin: 10px 50px;
+    font-size: 13px;
+}
+
+.article_list .article_description a {
+    color: black;
+}
+
+.article_list .article_description a:hover {
+    color: gray;
+}
+
+.article_title {
+    background-color: lightgrey;
+}
+
+.article_list .article_info {
+    text-align: right;
+}

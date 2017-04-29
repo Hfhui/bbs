@@ -1,0 +1,39 @@
+<extend name="Base/common"/>
+
+<block name="style">
+    <link rel="stylesheet" type="text/css" href="__CSS__/UserCenter/index.css"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__/UserCenter/userinfo.css"/>
+</block>
+
+<block name="body">
+    <include file="index"/>
+
+    <div class="user_info">
+        <div class="usr_info_block">
+            <label>昵称：</label>
+            <span>{$usr_info.nickname}</span>
+        </div>
+
+        <div class="usr_info_block">
+            <label>积分：</label>
+            <span>{$usr_info.score}</span>
+        </div>
+
+        <div class="usr_info_block">
+            <label>登录时间：</label>
+            <span>{$usr_info.last_login_time|date='Y-m-d H:i',###}</span>
+        </div>
+
+        <div class="usr_info_block">
+            <label>登录IP：</label>
+            <span>{$usr_info.last_login_ip}</span>
+        </div>
+
+        <div class="usr_info_block">
+            <label>注册时间：</label>
+            <span>{$usr_info.reg_time|date='Y-m-d H:i',###}</span>
+        </div>
+    </div>
+
+    <div class="clear_div"></div>
+</block>

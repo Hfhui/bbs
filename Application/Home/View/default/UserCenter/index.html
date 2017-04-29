@@ -1,0 +1,9 @@
+<div class="menu_left">
+    <ul>
+        <volist name="list" id="vo">
+            <li  <?php if($menu_select == $vo['title']) echo 'class="menu_left_select"'; ?>>
+                <a href="{:U($vo['url'])}">{$vo['title']}</a>
+            </li>
+        </volist>
+    </ul>
+</div>

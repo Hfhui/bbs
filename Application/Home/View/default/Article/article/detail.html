@@ -1,0 +1,125 @@
+<extend name="Base/common"/>
+
+<block name="style">
+    <link rel="stylesheet" type="text/css" href="__CSS__/Article/detail.css"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__/Article/favorite.css"/>
+</block>
+
+<block name="js">
+    <script type="text/javascript" src="__PUBLIC__/static/jquery-1.8.3.min.js"></script>
+</block>
+
+<block name="body">
+    <div class="body_left">
+        <div class="article_type_list">
+            <ul>
+                {:W('Category/lists', array($category['id'], ACTION_NAME == 'index'))}
+            </ul>
+        </div>
+    </div>
+
+    <div class="body_right">
+        <div class="article_head">
+            <h2>{$info.title}</h2>
+
+            <span class="favorite">
+                <div class="praise">
+                    <span id="praise">
+                        <if condition="$collect">
+                            <img src="__PUBLIC__/Home/images/Article/favorite_on.png" id="praise-img"/>
+                            <else/><img src="__PUBLIC__/Home/images/Article/favorite_off.png" id="praise-img"/>
+                        </if>
+                    </span>
+                    <span id="praise-txt">{$info.bookmark}</span>
+                    <span id="add-num"><em>+1</em></span>
+                </div>
+            </span>
+
+            <p class="article_head_info">
+				<span class="pull_left">
+					<span class="author">{$info.uid|get_username}</span>
+					<span> 发表于 {$info.create_time|date='Y-m-d H:i',###}</span>
+				</span>
+                <span class="pull_right">
+					<article:prev name="prev" info="info">
+                        <a href="{:U('?id='.$prev['id'])}">上一篇</a>
+                    </article:prev>
+                    <article:next name="next" info="info">
+                        <a href="{:U('?id='.$next['id'])}">下一篇</a>
+                    </article:next>
+				</span>
+            </p>
+            <div class="clear_div"></div>
+            <hr/>
+        </div>
+
+        <div class="article_body">
+            <section id="contents">{$info.content}</section>
+            <hr/>
+
+            <!--畅言-->
+            <div id="SOHUCS"></div>
+            <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+            <script type="text/javascript">
+                window.changyan.api.config({
+                    appid: 'cysQgG2Sb',
+                    conf: 'prod_c5e958221645035b16a72442b1b0e2eb'
+                });
+            </script>
+        </div>
+    </div>
+
+    <div class="clear_div"></div>
+</block>
+
+<block name="script">
+    <script type="text/javascript">
+        /*
+         * 动态点赞
+         * 此效果包含css3，部分浏览器不兼容（如：IE10以下的版本）
+         */
+        $(function () {
+            $("#praise").click(function () {
+                var praise_img = $("#praise-img");
+                var text_box = $("#add-num");
+                var praise_txt = $("#praise-txt");
+                var num = parseInt(praise_txt.text());
+                if (praise_img.attr("src") == ("__PUBLIC__/Home/images/Article/favorite_on.png")) {
+                    // 取消收藏文章
+                    $.post("{:U('Home/Collection/collect')}", {
+                        collect: 0,
+                        article_id: "{$info.id}"
+                    }, function (data, status) {
+                        if (!data["res"]) {
+                            alert("请先登录^_^!");
+                        } else {
+                            $("#praise").html("<img src='__PUBLIC__/Home/images/Article/favorite_off.png' id='praise-img' class='animation' />");
+                            praise_txt.removeClass("hover");
+                            text_box.show().html("<em class='add-animation'>-1</em>");
+                            $(".add-animation").removeClass("hover");
+                            num -= 1;
+                            praise_txt.text(num);
+                        }
+                    }, "json");
+                } else if (praise_img.attr("src") == ("__PUBLIC__/Home/images/Article/favorite_off.png")) {
+                    // 收藏文章
+                    $.post("{:U('Home/Collection/collect')}", {
+                        collect: 1,
+                        article_id: "{$info.id}"
+                    }, function (data, status) {
+                        if (!data["res"]) {
+                            alert("请先登录^_^!");
+                        } else {
+                            $("#praise").html("<img src='__PUBLIC__/Home/images/Article/favorite_on.png' id='praise-img' class='animation' />");
+                            praise_txt.addClass("hover");
+                            text_box.show().html("<em class='add-animation'>+1</em>");
+                            $(".add-animation").addClass("hover");
+                            num += 1;
+                            praise_txt.text(num);
+                        }
+                    }, "json");
+                }
+            });
+        })
+    </script>
+</block>

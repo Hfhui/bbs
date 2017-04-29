@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{:C('WEB_SITE_TITLE')}</title>
+    <link href="__ROOT__/Public/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__/Base/base.css"/>
+    <!-- CSS文件 -->
+    <block name="style"></block>
+    <!-- JS文件 -->
+    <block name="js"></block>
+</head>
+<body>
+<!-- 头部 -->
+<div class="head">
+    <a class="site_name" href="{:U('index/index')}">{:C('WEB_SITE_TITLE')}</a>
+
+    <div class="site_menu">
+        <ul>
+            <think:nav name="nav">
+                <eq name="nav.pid" value="0">
+                    <li>
+                        <a href="{$nav.url|get_nav_url}"
+                           target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">{$nav.title}</a>
+                    </li>
+                </eq>
+            </think:nav>
+        </ul>
+    </div>
+
+    <div class="site_login">
+        <if condition="is_login()">
+            <ul class="is_login">
+                <li><b>{:get_username()}</b></li>
+                <li><a href="{:U('UserCenter/index')}">个人中心</a></li>
+                <li><a href="{:U('User/logout')}">退出</a></li>
+            </ul>
+            <else/>
+            <ul class="not_login">
+                <li>
+                    <a href="{:U('User/login')}">登录</a>
+                </li>
+                <li>
+                    <a href="{:U('User/register')}">注册</a>
+                </li>
+            </ul>
+        </if>
+    </div>
+</div>
+
+<!-- 主体 -->
+<div class="body">
+    <block name="body"></block>
+</div>
+
+<!-- 底部 -->
+<div class="foot">
+    <p> 本站由 <strong><a href="http://blog.hfhui.cn" target="_blank">huangfuhui@outlook.com</a></strong> 强力驱动</p>
+</div>
+
+<!-- JS代码 -->
+<block name="script"></block>
+
+</body>
+</html>

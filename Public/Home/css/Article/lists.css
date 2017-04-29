@@ -1,0 +1,57 @@
+/*文章页面样式表*/
+
+.body_left {
+    float: left;
+    width: 200px;
+    height: 500px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: lightyellow;
+}
+
+.article_type_list a {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 8px auto;
+    width: 100px;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+.article_type_list a:hover {
+    color: white;
+    background-color: lightgray;
+}
+
+.article_type_select {
+    color: black;
+    background: gray;
+}
+
+.body_right {
+    float: right;
+    width: 800px;
+    padding: 8px;
+}
+
+.article_list {
+    margin: 10px 50px;
+    font-size: 10px;
+}
+
+.article_list .article_description a {
+    color: black;
+}
+
+.article_list .article_description a:hover {
+    color: gray;
+}
+
+.article_title {
+    background-color: lightgrey;
+}
+
+.article_list .article_info {
+    text-align: right;
+}

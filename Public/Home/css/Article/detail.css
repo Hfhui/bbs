@@ -1,0 +1,70 @@
+/*文章详情页面样式表*/
+
+.body_left {
+    float: left;
+    width: 200px;
+    height: 500px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: lightyellow;
+}
+
+.article_type_list a {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 8px auto;
+    width: 100px;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+.article_type_list a:hover {
+    color: white;
+    background-color: lightgray;
+}
+
+.body_right {
+    float: right;
+    width: 800px;
+    padding: 10px;
+}
+
+.article_head {
+    background-color: WhiteSmoke;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 0px 15px;
+    margin-bottom: 10px;
+}
+
+.article_head h2 {
+    text-align: center;
+}
+
+.article_head a {
+    font-weight: bold;
+    display: inline-block;
+    border: 1px solid gray;
+}
+
+.article_head a:hover {
+    color: white;
+    background-color: lightgray;
+}
+
+.favorite {
+    height: 40px;
+    width: 100px;
+    float: left;
+}
+
+.article_head_info {
+    float: right;
+}
+
+.article_body {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: WhiteSmoke;
+}

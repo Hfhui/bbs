@@ -1,0 +1,88 @@
+/*网站框架样式表*/
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    font: 14px/1.5 "microsoft yahei", Helvetica, Tahoma, Arial, "Microsoft jhengHei", sans-serif;
+    color: black;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+ul {
+    list-style: none;
+}
+
+.head {
+    margin-top: 5px;
+    border: 1px solid lightgray;
+    height: 50px;
+    background-color: LightGoldenRodYellow;
+}
+
+.site_name {
+    display: block;
+    float: left;
+    margin-left: 100px;
+    font-size: 30px;
+    color: black;
+}
+
+.site_menu {
+    float: left;
+    margin-left: 50px;
+}
+
+.site_menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.site_menu ul li a {
+    color: black;
+    border: 1px solid gray;
+    padding: 3px;
+}
+
+.site_menu ul li a:hover {
+    color: white;
+    background-color: gray;
+}
+
+.site_login {
+    float: right;
+    margin-right: 100px;
+}
+
+.site_login ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.site_login ul li a:hover {
+    color: black;
+}
+
+.body {
+    border-radius: 10px;
+    border-color: lightgray;
+    border-style: solid;
+    border-width: 0px 1px;
+    margin: 5px 150px;
+    padding: 10px;
+}
+
+.foot {
+    border: 1px solid lightgray;
+    margin: 0px auto;
+    text-align: center;
+    background-color: LightGoldenRodYellow;
+}
+
+.clear_div {
+    clear: both;
+}

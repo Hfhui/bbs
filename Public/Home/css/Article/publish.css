@@ -1,0 +1,9 @@
+/*发表帖子页面样式表*/
+
+.publish_body {
+    padding: 0 10px;
+}
+
+.publish_body_block {
+    margin-top: 10px;
+}

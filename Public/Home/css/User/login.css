@@ -1,0 +1,24 @@
+/*登录页面样式表*/
+
+.login_head a:hover {
+    color: white;
+    background: gray;
+}
+
+.login_body {
+    margin: 50px 10px;
+    font-size: 18px;
+}
+
+.login_block {
+    margin: 10px auto;
+}
+
+.login_block label {
+    display: inline-block;
+    background-color: lightgray;
+}
+
+.check_tips {
+    color: red;
+}

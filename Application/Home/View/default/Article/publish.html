@@ -1,0 +1,35 @@
+<extend name="Base/common"/>
+
+<block name="style">
+    <link rel="stylesheet" type="text/css" href="__CSS__/Article/publish.css"/>
+</block>
+
+<block name="body">
+    <div class="publish_body">
+        <form action="{:U('Home/article/publish')}" method="post">
+            <div class="publish_body_block">
+                <label>标题：</label>
+                <input type="text" name="title"/>
+            </div>
+            <div class="publish_body_block">
+                <label>描述：</label>
+                <textarea name="description" rows="1" cols="120"></textarea>
+            </div>
+            <div class="publish_body_block">
+                <label>类型：</label>
+                <volist name="category_type" id="vo">
+                    <label>
+                        <input type="radio" name="category_id" value="{$vo.id}"/>{$vo.title}
+                    </label>
+                </volist>
+            </div>
+            <div class="publish_body_block">
+                <textarea name="content"></textarea>
+                {:hook('documentEditFormContent', array('name'=>'content','value'=>''))}
+            </div>
+            <div class="publish_body_block">
+                <input type="submit" value="马上发表"/>
+            </div>
+        </form>
+    </div>
+</block>

@@ -1,0 +1,31 @@
+/*个人中心左菜单样式表*/
+
+.menu_left {
+    float: left;
+    width: 150px;
+    height: 500px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    background-color: lightyellow;
+}
+
+.menu_left ul {
+    padding: 0px;
+}
+
+.menu_left a {
+    font-size: 16px;
+    display: block;
+    border: 1px solid gray;
+    margin: 10px 15px;
+}
+
+.menu_left_select a {
+    color: white;
+    background-color: gray;
+}
+
+.menu_left a:hover {
+    background-color: lightgrey;
+}

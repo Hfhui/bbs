@@ -1,0 +1,30 @@
+<extend name="Base/common"/>
+
+<block name="style">
+    <link rel="stylesheet" type="text/css" href="__CSS__/UserCenter/index.css"/>
+    <link rel="stylesheet" type="text/css" href="__CSS__/UserCenter/articles.css"/>
+</block>
+
+<block name="body">
+    <include file="index"/>
+
+    <div class="article_list">
+        <ul>
+            <volist name="data" id="vo">
+                <a href="{:U('Article/detail', array('id' => $vo['id']))}">
+                    <li>
+                        <div>
+                            <span class="title">{$vo['title']}</span>
+                            <span class="view">浏览量({$vo['view']})</span>
+                            <span class="create_time">{$vo['create_time']|date='Y-m-d H:i',###}</span><br/>
+                        </div>
+                        <span class="description">{$vo['description']}</span>
+                    </li>
+                </a>
+                <hr/>
+            </volist>
+        </ul>
+    </div>
+
+    <div class="clear_div"></div>
+</block>
