@@ -80,6 +80,13 @@ class AdminController extends Controller
         if (!$Auth) {
             $Auth = new \Think\Auth();
         }
+
+        // 剔除生效的动态权限
+        $res = D('DynamicAuth')->getDynamicAuthUrlsForUsr(UID);
+        if (in_array(strtolower($rule), $res)) {
+            return true;
+        }
+
         if (!$Auth->check($rule, UID, $type, $mode)) {
             return false;
         }
