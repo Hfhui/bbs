@@ -150,11 +150,25 @@ class DynamicAuthController extends AdminController
             $this->error('缺少参数！');
         }
 
-        if (D('DynamicAuth')->agreeApplication($id))
-        {
+        if (D('DynamicAuth')->agreeApplication($id)) {
             $this->success('操作成功！', U('DynamicAuth/index'));
         } else {
             $this->error('未知错误！');
         }
+    }
+
+    /**
+     * 回收权限
+     */
+    public function recycle()
+    {
+        $ids = I('post.id');
+        if (empty($ids)) {
+            $this->error('请选择要操作的数据！');
+        }
+
+        // 回收权限
+        D('DynamicAuth')->recycle($ids);
+        $this->success('操作成功！', U('DynamicAuth/index'));
     }
 }

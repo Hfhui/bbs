@@ -86,6 +86,21 @@ class DynamicAuthModel extends model
         return true;
     }
 
+
+    /**
+     * 回收尚生效的临时权限
+     * @param $ids 权限记录ID序列
+     */
+    public function recycle($ids)
+    {
+        $data = $this->where(array('id' => array('in', implode(',', $ids))))->select();
+        foreach ($data as $v) {
+            if (($this->renderApplyValidDate($v['apply_valid_date']) + $v['deal_time'] > time()) && $v['valid'] == '1') {
+                $this->where(array('id' => $v['id']))->save(array('valid' => 0));
+            }
+        }
+    }
+
     /**
      * 获取用户申请成功并且有效的权限序列
      * @param $uid
