@@ -1,0 +1,112 @@
+<extend name="Public/base" />
+
+<block name="body">
+    <div class="tab-wrap">
+        <div class="main-title">
+            <h2>申请详情</h2>
+        </div>
+        <div class="tab-content">
+            <!-- 访问授权 -->
+            <div class="tab-pane in">
+                <dl class="checkmod">
+                    <dt class="hd"><label class="checkbox">申请信息</label></dt>
+                    <dd class="bd"><span>申请用户： {$data.nickname}</span></dd>
+                    <dd class="bd"><span>申请时间： {$data.application_date}</span>
+                    <dd class="bd"><span>申请状态： {$data.status}</span></dd>
+                    <dd class="bd"><span>是否生效： {$data.valid}</span></dd>
+                </dl>
+
+                <dl class="checkmod">
+                    <dt class="hd"><label class="checkbox">申请权限总览</label></dt>
+                    <dd class="bd"><span style="color: red">{$data.apply_auth_name}</span></dd>
+                </dl>
+
+                <dl class="checkmod">
+                    <dt class="hd"><label class="checkbox">申请时长</label></dt>
+                    <dd class="bd">
+                        <label class="checkbox"><input class="valid_data" type="radio" name="apply_valid_date" value="1" checked/>一个小时</label>
+                        <label class="checkbox"><input class="valid_data" type="radio" name="apply_valid_date" value="2"/>三个小时</label>
+                        <label class="checkbox"><input class="valid_data" type="radio" name="apply_valid_date" value="3"/>十二小时</label>
+                        <label class="checkbox"><input class="valid_data" type="radio" name="apply_valid_date" value="4"/>二十四小时</label>
+                    </dd>
+                </dl>
+
+                <dl class="checkmod">
+                    <dt class="hd"><label class="checkbox">申请理由</label></dt>
+                    <dd class="bd">
+                        <div style="border:1px lightgrey solid; width: 700px; margin: 5px; padding: 10px">
+                            <span>{$data.application_reason}</span>
+                        </div>
+                    </dd>
+                </dl>
+
+                <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+            </div>
+        </div>
+    </div>
+</block>
+
+<block name="script">
+    <script type="text/javascript" src="__STATIC__/qtip/jquery.qtip.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/qtip/jquery.qtip.min.css" media="all">
+    <script type="text/javascript" charset="utf-8">
+        +function($){
+            var rules = [{$data.apply_auth}];
+            $('.auth_rules').each(function(){
+                if( $.inArray( parseInt(this.value,10),rules )>-1 ){
+                    $(this).prop('checked',true);
+                }
+                if(this.value==''){
+                    $(this).closest('span').remove();
+                }
+            });
+
+            var rules = [{$data.apply_valid_date}];
+            $('.valid_data').each(function(){
+                if( $.inArray( parseInt(this.value,10),rules )>-1 ){
+                    $(this).prop('checked',true);
+                }
+                if(this.value==''){
+                    $(this).closest('span').remove();
+                }
+            });
+
+            //全选节点
+            $('.rules_all').on('change',function(){
+                $(this).closest('dl').find('dd').find('input').prop('checked',this.checked);
+            });
+            $('.rules_row').on('change',function(){
+                $(this).closest('.rule_check').find('.child_row').find('input').prop('checked',this.checked);
+            });
+
+            $('.checkbox').each(function(){
+                $(this).qtip({
+                    content: {
+                        text: $(this).attr('title'),
+                        title: $(this).text()
+                    },
+                    position: {
+                        my: 'bottom center',
+                        at: 'top center',
+                        target: $(this)
+                    },
+                    style: {
+                        classes: 'qtip-dark',
+                        tip: {
+                            corner: true,
+                            mimic: false,
+                            width: 10,
+                            height: 10
+                        }
+                    }
+                });
+            });
+
+            $('select[name=group]').change(function(){
+                location.href = this.value;
+            });
+            //导航高亮
+            highlight_subnav('{:U('AuthTransfer/index')}');
+        }(jQuery);
+    </script>
+</block>

@@ -1,0 +1,87 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <!-- 标题栏 -->
+    <div class="main-title">
+        <h2>权限转移</h2>
+    </div>
+    <div class="cf">
+        <ul class="tab-nav nav">
+            <li><a href="{:U('AuthTransfer/index')}">转移记录</a></li>
+            <li class="current"><a href="javascript:;">权限转移</a></li>
+        </ul>
+    </div>
+
+    <!-- 数据列表 -->
+    <div class="data-table table-striped">
+        <table class="">
+            <thead>
+            <tr>
+                <th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
+                <th class="">权限编号</th>
+                <th class="">申请者</th>
+                <th class="">拥有者</th>
+                <th class="">有效期</th>
+                <th class="">权限详情</th>
+                <th class="">转移对象</th>
+                <th class="">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <notempty name="list">
+                <volist name="list" id="vo">
+                    <tr>
+                        <td><input class="ids" type="checkbox" name="id[]" value="{$vo.id}"/></td>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.applicant}</td>
+                        <td>{$vo.performer}</td>
+                        <td>{$vo.valid_time} 前</td>
+                        <td><a href="{:U('AuthTransfer/detail?id='.$vo['id'])}">详情</a></td>
+                        <td><input id="{$vo.id}" class="inheritor" type="text" name="inheritor" placeholder="用户UID" /></td>
+                        <td>
+                            <form class="transfer_form{$vo.id}" action="{:U('AuthTransfer/transferAuth')}" method="post">
+                                <input type="hidden" name="auth_id" value="{$vo.id}" />
+                                <input class="inheritor_hidden{$vo.id}" type="hidden" name="inheritor" value="" />
+                            </form>
+                            <a name="{$vo.id}" class="transfer" href="###">转移</a>
+                        </td>
+                    </tr>
+                </volist>
+                <else/>
+                <td colspan="9" class="text-center"> aOh! 暂时还没有内容!</td>
+            </notempty>
+            </tbody>
+        </table>
+    </div>
+    <div class="page">
+        {$_page}
+    </div>
+</block>
+
+<block name="script">
+    <script type="text/javascript" src="__STATIC__/jquery-1.8.3.min.js"></script>
+
+    <script type="text/javascript">
+        $(".inheritor").keyup(function(){
+            var id = $(this).attr("id");
+            var className = ".inheritor_hidden" + id;
+            var val = $(this).val();
+            $(className).attr("value", val);
+        });
+
+
+        $(".transfer").click(function () {
+            var id = $(this).attr("name");
+            var className = ".inheritor_hidden" + id;
+            var h = $(className).val();
+            if (!h) {
+                alert("请填写转移用户！");
+            } else {
+                var formClassName = ".transfer_form" + id;
+                $(formClassName).submit();
+            }
+        });
+
+        highlight_subnav('{:U('AuthTransfer/index')}');
+    </script>
+</block>

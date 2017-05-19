@@ -19,8 +19,8 @@
             <tr>
                 <th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
                 <th class="">编号</th>
-                <th class="">用户ID</th>
-                <th class="">用户昵称</th>
+                <th class="">申请用户</th>
+                <th class="">执行用户</th>
                 <th class="">申请时间</th>
                 <th class="">处理时间</th>
                 <th class="">申请状态</th>
@@ -34,8 +34,8 @@
                     <tr>
                         <td><input class="ids" type="checkbox" name="id[]" value="{$vo.id}"/></td>
                         <td>{$vo.id}</td>
-                        <td>{$vo.uid}</td>
-                        <td>{$vo.nickname}</td>
+                        <td>{$vo.applicant}</td>
+                        <td>{$vo.performer}</td>
                         <td><span>{$vo.application_date}</span></td>
                         <td><span>{$vo.deal_time}</span></td>
                         <td><span>{$vo.status}</span></td>

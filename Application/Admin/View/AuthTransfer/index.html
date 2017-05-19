@@ -1,0 +1,51 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <!-- 标题栏 -->
+    <div class="main-title">
+        <h2>权限转移</h2>
+    </div>
+    <div class="cf">
+        <ul class="tab-nav nav">
+            <li class="current"><a href="javascript:;">转移记录</a></li>
+            <li><a href="{:U('AuthTransfer/transfer')}">权限转移</a></li>
+        </ul>
+    </div>
+
+    <!-- 数据列表 -->
+    <div class="data-table table-striped">
+        <table class="">
+            <thead>
+            <tr>
+                <th class="row-selected row-selected"><input class="check-all" type="checkbox"/></th>
+                <th>编号</th>
+                <th>操作用户</th>
+                <th>继承用户</th>
+                <th>操作时间</th>
+                <th>权限详情</th>
+            </tr>
+            </thead>
+            <tbody>
+            <notempty name="list">
+                <volist name="list" id="vo">
+                    <tr>
+                        <td><input class="ids" type="checkbox" name="id[]" value="{$vo.id}"/></td>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.operator}</td>
+                        <td>{$vo.inheritor}</td>
+                        <td>{$vo.build_time}</td>
+                        <td>
+                            <a href="{:U('AuthTransfer/detail?id='.$vo['auth_id'])}">详情</a>
+                        </td>
+                    </tr>
+                </volist>
+                <else/>
+                <td colspan="9" class="text-center"> aOh! 暂时还没有内容!</td>
+            </notempty>
+            </tbody>
+        </table>
+    </div>
+    <div class="page">
+        {$_page}
+    </div>
+</block>

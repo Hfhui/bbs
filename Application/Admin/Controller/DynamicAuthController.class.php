@@ -9,7 +9,6 @@
 namespace Admin\Controller;
 
 use Admin\Model\AuthRuleModel;
-use Admin\Model\AuthGroupModel;
 
 class DynamicAuthController extends AdminController
 {

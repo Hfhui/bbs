@@ -23,6 +23,7 @@ class DynamicAuthModel extends model
     {
         $data = array(
             'uid' => $uid,
+            'performer' => $uid,
             'apply_auth' => $auth_ids,
             'apply_valid_date' => $apply_valid_date,
             'application_reason' => $application_reason,
@@ -43,7 +44,8 @@ class DynamicAuthModel extends model
         $res = $this->order('id desc')->select();
         $count = count($res);
         for ($i = 0; $i < $count; $i++) {
-            $res[$i]['nickname'] = get_nickname($res[$i]['uid']);
+            $res[$i]['applicant'] = get_nickname($res[$i]['uid']);
+            $res[$i]['performer'] = get_nickname($res[$i]['performer']);
             $this->renderData($res[$i]['application_date'], $res[$i]['apply_valid_date'], $res[$i]['deal_time'], $res[$i]['status'], $res[$i]['valid']);
         }
         return $res;
@@ -108,7 +110,7 @@ class DynamicAuthModel extends model
      */
     public function getDynamicAuthForUser($uid)
     {
-        $res = $this->where(array('uid' => $uid, 'valid' => '1'))
+        $res = $this->where(array('performer' => $uid, 'valid' => '1'))
             ->field('id,apply_auth,apply_valid_date,deal_time')
             ->select();
 
@@ -116,13 +118,14 @@ class DynamicAuthModel extends model
             return '';
         }
 
+        // 更新并剔除失效的动态权限
         $count = count($res);
         for ($i = 0; $i < $count; $i++) {
             if (($this->renderApplyValidDate($res[$i]['apply_valid_date']) + $res[$i]['deal_time']) < time()) {
                 $this->where(array('id' => $res[$i]['id']))->save(array('valid' => '0'));
             }
         }
-        $res = $this->where(array('uid' => $uid, 'valid' => '1'))->field('apply_auth')->select();
+        $res = $this->where(array('performer' => $uid, 'valid' => '1'))->field('apply_auth')->select();
         $auth_list = '';
         foreach ($res as $k) {
             $auth_list .= $k['apply_auth'] . ',';
@@ -153,6 +156,22 @@ class DynamicAuthModel extends model
         }
 
         return $res;
+    }
+
+    /**
+     * 判断某条正在生效的动态权限是否属于用户
+     * @param $auth_id
+     * @param $uid
+     * @return bool
+     */
+    public function authIsForUser($auth_id, $uid)
+    {
+        $valid = $this->where(array('id' => $auth_id, 'performer' => $uid))->getField('valid');
+        if (empty($valid)) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     /**
