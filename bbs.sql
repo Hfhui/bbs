@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : ali
-Source Server Version : 50550
-Source Host           : ali.hfhui.cn:3300
+Source Server         : localhost
+Source Server Version : 100119
+Source Host           : localhost:3306
 Source Database       : bbs
 
 Target Server Type    : MYSQL
-Target Server Version : 50550
+Target Server Version : 100119
 File Encoding         : 65001
 
-Date: 2017-04-29 18:53:17
+Date: 2017-05-19 11:56:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -66,7 +66,7 @@ CREATE TABLE `bbs_action_log` (
   KEY `action_ip_ix` (`action_ip`),
   KEY `action_id_ix` (`action_id`),
   KEY `user_id_ix` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=151 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='行为日志表';
+) ENGINE=MyISAM AUTO_INCREMENT=218 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='行为日志表';
 
 -- ----------------------------
 -- Records of bbs_action_log
@@ -218,9 +218,76 @@ INSERT INTO `bbs_action_log` VALUES ('144', '10', '1', '0', 'Menu', '146', '操�
 INSERT INTO `bbs_action_log` VALUES ('145', '1', '1', '0', 'member', '1', 'admin在2017-04-29 18:18登录了后台', '1', '1493461110');
 INSERT INTO `bbs_action_log` VALUES ('146', '1', '1', '0', 'member', '1', 'admin在2017-04-29 18:19登录了后台', '1', '1493461142');
 INSERT INTO `bbs_action_log` VALUES ('147', '10', '1', '0', 'Menu', '146', '操作url：/bbs/index.php?s=/Admin/Menu/edit.html', '1', '1493461166');
-INSERT INTO `bbs_action_log` VALUES ('148', '1', '3', '3085702124', 'member', '3', 'abc在2017-04-29 18:41登录了后台', '1', '1493462519');
-INSERT INTO `bbs_action_log` VALUES ('149', '1', '1', '3085702124', 'member', '1', 'admin在2017-04-29 18:42登录了后台', '1', '1493462543');
-INSERT INTO `bbs_action_log` VALUES ('150', '1', '3', '3085702124', 'member', '3', 'abc在2017-04-29 18:43登录了后台', '1', '1493462593');
+INSERT INTO `bbs_action_log` VALUES ('148', '1', '1', '0', 'member', '1', 'admin在2017-04-29 19:00登录了后台', '1', '1493463610');
+INSERT INTO `bbs_action_log` VALUES ('149', '1', '8', '0', 'member', '8', 'test在2017-05-02 13:39登录了后台', '1', '1493703590');
+INSERT INTO `bbs_action_log` VALUES ('150', '1', '1', '0', 'member', '1', 'admin在2017-05-02 13:40登录了后台', '1', '1493703641');
+INSERT INTO `bbs_action_log` VALUES ('151', '1', '2', '0', 'member', '2', 'hfhui在2017-05-02 13:40登录了后台', '1', '1493703653');
+INSERT INTO `bbs_action_log` VALUES ('152', '1', '1', '0', 'member', '1', 'admin在2017-05-02 13:41登录了后台', '1', '1493703667');
+INSERT INTO `bbs_action_log` VALUES ('153', '1', '8', '0', 'member', '8', 'test在2017-05-02 13:41登录了后台', '1', '1493703717');
+INSERT INTO `bbs_action_log` VALUES ('154', '4', '8', '0', 'document', '24', 'test在2017-05-02 13:42发表了一篇文章。\r\n表document，记录编号24。', '1', '1493703773');
+INSERT INTO `bbs_action_log` VALUES ('155', '1', '1', '0', 'member', '1', 'admin在2017-05-02 13:43登录了后台', '1', '1493703817');
+INSERT INTO `bbs_action_log` VALUES ('156', '1', '1', '0', 'member', '1', 'admin在2017-05-04 10:57登录了后台', '1', '1493866646');
+INSERT INTO `bbs_action_log` VALUES ('157', '10', '1', '0', 'Menu', '147', '操作url：/bbs/index.php?s=/Admin/Menu/add.html', '1', '1493866976');
+INSERT INTO `bbs_action_log` VALUES ('158', '10', '1', '0', 'Menu', '147', '操作url：/bbs/index.php?s=/Admin/Menu/edit.html', '1', '1493867035');
+INSERT INTO `bbs_action_log` VALUES ('159', '10', '1', '0', 'Menu', '148', '操作url：/bbs/index.php?s=/Admin/Menu/add.html', '1', '1493870037');
+INSERT INTO `bbs_action_log` VALUES ('160', '10', '1', '0', 'Menu', '148', '操作url：/bbs/index.php?s=/Admin/Menu/edit.html', '1', '1493870730');
+INSERT INTO `bbs_action_log` VALUES ('161', '10', '1', '0', 'Menu', '148', '操作url：/bbs/index.php?s=/Admin/Menu/edit.html', '1', '1493870781');
+INSERT INTO `bbs_action_log` VALUES ('162', '1', '1', '0', 'member', '1', 'admin在2017-05-04 21:10登录了后台', '1', '1493903443');
+INSERT INTO `bbs_action_log` VALUES ('163', '1', '1', '0', 'member', '1', 'admin在2017-05-05 09:46登录了后台', '1', '1493948814');
+INSERT INTO `bbs_action_log` VALUES ('164', '10', '1', '0', 'Menu', '149', '操作url：/bbs/index.php?s=/Admin/Menu/add.html', '1', '1493949214');
+INSERT INTO `bbs_action_log` VALUES ('165', '1', '1', '0', 'member', '1', 'admin在2017-05-05 16:27登录了后台', '1', '1493972850');
+INSERT INTO `bbs_action_log` VALUES ('166', '1', '1', '0', 'member', '1', 'admin在2017-05-06 10:18登录了后台', '1', '1494037128');
+INSERT INTO `bbs_action_log` VALUES ('167', '1', '2', '0', 'member', '2', 'hfhui在2017-05-06 10:23登录了后台', '1', '1494037411');
+INSERT INTO `bbs_action_log` VALUES ('168', '1', '2', '0', 'member', '2', 'hfhui在2017-05-06 10:49登录了后台', '1', '1494038981');
+INSERT INTO `bbs_action_log` VALUES ('169', '1', '1', '0', 'member', '1', 'admin在2017-05-14 10:02登录了后台', '1', '1494727365');
+INSERT INTO `bbs_action_log` VALUES ('170', '1', '1', '0', 'member', '1', 'admin在2017-05-14 12:33登录了后台', '1', '1494736403');
+INSERT INTO `bbs_action_log` VALUES ('171', '1', '1', '0', 'member', '1', 'admin在2017-05-15 10:50登录了后台', '1', '1494816601');
+INSERT INTO `bbs_action_log` VALUES ('172', '1', '1', '0', 'member', '1', 'admin在2017-05-15 11:18登录了后台', '1', '1494818314');
+INSERT INTO `bbs_action_log` VALUES ('173', '1', '1', '0', 'member', '1', 'admin在2017-05-16 11:21登录了后台', '1', '1494904914');
+INSERT INTO `bbs_action_log` VALUES ('174', '1', '1', '0', 'member', '1', 'admin在2017-05-18 16:06登录了后台', '1', '1495094765');
+INSERT INTO `bbs_action_log` VALUES ('175', '1', '2', '0', 'member', '2', 'hfhui在2017-05-18 16:08登录了后台', '1', '1495094928');
+INSERT INTO `bbs_action_log` VALUES ('176', '1', '1', '0', 'member', '1', 'admin在2017-05-18 16:09登录了后台', '1', '1495094952');
+INSERT INTO `bbs_action_log` VALUES ('177', '1', '2', '0', 'member', '2', 'hfhui在2017-05-18 16:09登录了后台', '1', '1495094983');
+INSERT INTO `bbs_action_log` VALUES ('178', '1', '1', '0', 'member', '1', 'admin在2017-05-18 16:11登录了后台', '1', '1495095064');
+INSERT INTO `bbs_action_log` VALUES ('179', '1', '2', '0', 'member', '2', 'hfhui在2017-05-18 16:12登录了后台', '1', '1495095171');
+INSERT INTO `bbs_action_log` VALUES ('180', '1', '1', '0', 'member', '1', 'admin在2017-05-18 17:30登录了后台', '1', '1495099854');
+INSERT INTO `bbs_action_log` VALUES ('181', '1', '2', '0', 'member', '2', 'hfhui在2017-05-18 18:02登录了后台', '1', '1495101726');
+INSERT INTO `bbs_action_log` VALUES ('182', '1', '1', '0', 'member', '1', 'admin在2017-05-18 18:02登录了后台', '1', '1495101764');
+INSERT INTO `bbs_action_log` VALUES ('183', '10', '1', '0', 'Menu', '150', '操作url：/bbs/index.php?s=/Admin/Menu/add.html', '1', '1495101817');
+INSERT INTO `bbs_action_log` VALUES ('184', '1', '2', '0', 'member', '2', 'hfhui在2017-05-18 18:04登录了后台', '1', '1495101869');
+INSERT INTO `bbs_action_log` VALUES ('185', '1', '1', '0', 'member', '1', 'admin在2017-05-18 19:23登录了后台', '1', '1495106597');
+INSERT INTO `bbs_action_log` VALUES ('186', '1', '2', '0', 'member', '2', 'hfhui在2017-05-18 19:23登录了后台', '1', '1495106623');
+INSERT INTO `bbs_action_log` VALUES ('187', '1', '1', '0', 'member', '1', 'admin在2017-05-18 19:24登录了后台', '1', '1495106644');
+INSERT INTO `bbs_action_log` VALUES ('188', '1', '1', '0', 'member', '1', 'admin在2017-05-18 20:02登录了后台', '1', '1495108943');
+INSERT INTO `bbs_action_log` VALUES ('189', '10', '1', '0', 'Menu', '151', '操作url：/bbs/index.php?s=/Admin/Menu/add.html', '1', '1495110890');
+INSERT INTO `bbs_action_log` VALUES ('190', '10', '1', '0', 'Menu', '151', '操作url：/bbs/index.php?s=/Admin/Menu/edit.html', '1', '1495110941');
+INSERT INTO `bbs_action_log` VALUES ('191', '10', '1', '0', 'Menu', '152', '操作url：/bbs/index.php?s=/Admin/Menu/add.html', '1', '1495113096');
+INSERT INTO `bbs_action_log` VALUES ('192', '1', '2', '0', 'member', '2', 'hfhui在2017-05-18 21:39登录了后台', '1', '1495114786');
+INSERT INTO `bbs_action_log` VALUES ('193', '1', '1', '0', 'member', '1', 'admin在2017-05-18 21:41登录了后台', '1', '1495114869');
+INSERT INTO `bbs_action_log` VALUES ('194', '1', '1', '0', 'member', '1', 'admin在2017-05-18 21:42登录了后台', '1', '1495114924');
+INSERT INTO `bbs_action_log` VALUES ('195', '1', '2', '0', 'member', '2', 'hfhui在2017-05-18 21:42登录了后台', '1', '1495114962');
+INSERT INTO `bbs_action_log` VALUES ('196', '1', '1', '0', 'member', '1', 'admin在2017-05-18 21:43登录了后台', '1', '1495114981');
+INSERT INTO `bbs_action_log` VALUES ('197', '1', '2', '0', 'member', '2', 'hfhui在2017-05-18 21:43登录了后台', '1', '1495115037');
+INSERT INTO `bbs_action_log` VALUES ('198', '1', '1', '0', 'member', '1', 'admin在2017-05-18 22:12登录了后台', '1', '1495116723');
+INSERT INTO `bbs_action_log` VALUES ('199', '10', '1', '0', 'Menu', '153', '操作url：/bbs/index.php?s=/Admin/Menu/add.html', '1', '1495116790');
+INSERT INTO `bbs_action_log` VALUES ('200', '1', '2', '0', 'member', '2', 'hfhui在2017-05-18 22:13登录了后台', '1', '1495116814');
+INSERT INTO `bbs_action_log` VALUES ('201', '1', '1', '0', 'member', '1', 'admin在2017-05-18 22:52登录了后台', '1', '1495119177');
+INSERT INTO `bbs_action_log` VALUES ('202', '10', '1', '0', 'Menu', '152', '操作url：/bbs/index.php?s=/Admin/Menu/edit.html', '1', '1495119276');
+INSERT INTO `bbs_action_log` VALUES ('203', '10', '1', '0', 'Menu', '152', '操作url：/bbs/index.php?s=/Admin/Menu/edit.html', '1', '1495119292');
+INSERT INTO `bbs_action_log` VALUES ('204', '10', '1', '0', 'Menu', '154', '操作url：/bbs/index.php?s=/Admin/Menu/add.html', '1', '1495119320');
+INSERT INTO `bbs_action_log` VALUES ('205', '1', '2', '0', 'member', '2', 'hfhui在2017-05-18 22:55登录了后台', '1', '1495119336');
+INSERT INTO `bbs_action_log` VALUES ('206', '1', '1', '0', 'member', '1', 'admin在2017-05-18 22:55登录了后台', '1', '1495119357');
+INSERT INTO `bbs_action_log` VALUES ('207', '1', '2', '0', 'member', '2', 'hfhui在2017-05-18 22:56登录了后台', '1', '1495119375');
+INSERT INTO `bbs_action_log` VALUES ('208', '1', '2', '0', 'member', '2', 'hfhui在2017-05-19 09:38登录了后台', '1', '1495157907');
+INSERT INTO `bbs_action_log` VALUES ('209', '1', '1', '0', 'member', '1', 'admin在2017-05-19 09:42登录了后台', '1', '1495158158');
+INSERT INTO `bbs_action_log` VALUES ('210', '1', '8', '0', 'member', '8', 'test在2017-05-19 09:43登录了后台', '1', '1495158213');
+INSERT INTO `bbs_action_log` VALUES ('211', '1', '1', '0', 'member', '1', 'admin在2017-05-19 09:44登录了后台', '1', '1495158288');
+INSERT INTO `bbs_action_log` VALUES ('212', '1', '8', '0', 'member', '8', 'test在2017-05-19 09:45登录了后台', '1', '1495158344');
+INSERT INTO `bbs_action_log` VALUES ('213', '1', '2', '0', 'member', '2', 'hfhui在2017-05-19 10:38登录了后台', '1', '1495161536');
+INSERT INTO `bbs_action_log` VALUES ('214', '1', '8', '0', 'member', '8', 'test在2017-05-19 10:46登录了后台', '1', '1495161990');
+INSERT INTO `bbs_action_log` VALUES ('215', '1', '1', '0', 'member', '1', 'admin在2017-05-19 11:09登录了后台', '1', '1495163348');
+INSERT INTO `bbs_action_log` VALUES ('216', '1', '2', '0', 'member', '2', 'hfhui在2017-05-19 11:09登录了后台', '1', '1495163374');
+INSERT INTO `bbs_action_log` VALUES ('217', '1', '8', '0', 'member', '8', 'test在2017-05-19 11:54登录了后台', '1', '1495166087');
 
 -- ----------------------------
 -- Table structure for bbs_addons
@@ -395,7 +462,7 @@ CREATE TABLE `bbs_auth_group` (
 -- ----------------------------
 -- Records of bbs_auth_group
 -- ----------------------------
-INSERT INTO `bbs_auth_group` VALUES ('3', 'admin', '1', '管理员', '管理员用户组，拥有后台管理权限', '1', '1,2,3,4,5,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,79,80,81,82,83,84,86,87,88,89,90,91,92,93,94,95,100,102,103,107,108,109,110,205,206,207,208,209,210,211,212,213,214,215,216,224,225,226,228,229,230,231,232,233,234,235,236,237,238,239');
+INSERT INTO `bbs_auth_group` VALUES ('3', 'admin', '1', '管理员', '管理员用户组，拥有后台管理权限', '1', '1,2,3,5,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,79,80,81,82,83,84,86,87,88,89,90,91,92,93,100,102,103,107,108,109,110,205,206,207,208,211,212,213,214,215,216,224,225,226,228,229,230,231,232,233,234,235,236,237,238,239,240,242,243,244,245,247,248,249,250');
 INSERT INTO `bbs_auth_group` VALUES ('4', 'admin', '1', '普通用户组', '成功注册的普通用户', '1', '224,225,226,228,229,230,231,232,233,234,235,236,237,238,239,240,242');
 INSERT INTO `bbs_auth_group` VALUES ('5', 'admin', '1', '游客组', '未注册的用户', '1', '228,230,231,232,233,234,237,238');
 
@@ -414,12 +481,15 @@ CREATE TABLE `bbs_auth_group_access` (
 -- ----------------------------
 -- Records of bbs_auth_group_access
 -- ----------------------------
+INSERT INTO `bbs_auth_group_access` VALUES ('2', '3');
 INSERT INTO `bbs_auth_group_access` VALUES ('2', '4');
 INSERT INTO `bbs_auth_group_access` VALUES ('3', '4');
 INSERT INTO `bbs_auth_group_access` VALUES ('4', '4');
 INSERT INTO `bbs_auth_group_access` VALUES ('5', '4');
 INSERT INTO `bbs_auth_group_access` VALUES ('6', '4');
 INSERT INTO `bbs_auth_group_access` VALUES ('7', '4');
+INSERT INTO `bbs_auth_group_access` VALUES ('8', '3');
+INSERT INTO `bbs_auth_group_access` VALUES ('8', '4');
 
 -- ----------------------------
 -- Table structure for bbs_auth_rule
@@ -435,7 +505,7 @@ CREATE TABLE `bbs_auth_rule` (
   `condition` varchar(300) NOT NULL DEFAULT '' COMMENT '规则附加条件',
   PRIMARY KEY (`id`),
   KEY `module` (`module`,`status`,`type`)
-) ENGINE=MyISAM AUTO_INCREMENT=243 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=251 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bbs_auth_rule
@@ -672,6 +742,39 @@ INSERT INTO `bbs_auth_rule` VALUES ('239', 'admin', '1', 'Home/Article/publish',
 INSERT INTO `bbs_auth_rule` VALUES ('240', 'admin', '1', 'Home/Collection/collect', '收藏功能', '1', '');
 INSERT INTO `bbs_auth_rule` VALUES ('241', 'admin', '1', 'Home/Article/collections', '收藏列表', '-1', '');
 INSERT INTO `bbs_auth_rule` VALUES ('242', 'admin', '1', 'Home/UserCenter/collections', '收藏列表', '1', '');
+INSERT INTO `bbs_auth_rule` VALUES ('243', 'admin', '1', 'Admin/DynamicAuth/index', '动态权限', '1', '');
+INSERT INTO `bbs_auth_rule` VALUES ('244', 'admin', '1', 'Admin/DynamicAuth/add', '申请权限', '1', '');
+INSERT INTO `bbs_auth_rule` VALUES ('245', 'admin', '1', 'Admin/DynamicAuth/detail', '申请详情', '1', '');
+INSERT INTO `bbs_auth_rule` VALUES ('246', 'admin', '1', 'Admin/DynamicAuth/recycle', '回收权限', '1', '');
+INSERT INTO `bbs_auth_rule` VALUES ('247', 'admin', '1', 'Admin/AuthTransfer/index', '权限转移', '1', '');
+INSERT INTO `bbs_auth_rule` VALUES ('248', 'admin', '1', 'Admin/AuthTransfer/transfer', '转移查看', '1', '');
+INSERT INTO `bbs_auth_rule` VALUES ('249', 'admin', '1', 'Admin/AuthTransfer/detail', '权限详情', '1', '');
+INSERT INTO `bbs_auth_rule` VALUES ('250', 'admin', '1', 'Admin/AuthTransfer/transferAuth', '转移操作', '1', '');
+
+-- ----------------------------
+-- Table structure for bbs_auth_transfer
+-- ----------------------------
+DROP TABLE IF EXISTS `bbs_auth_transfer`;
+CREATE TABLE `bbs_auth_transfer` (
+  `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `auth_id` int(10) NOT NULL COMMENT '被转移权限id',
+  `operator` int(10) NOT NULL COMMENT '操作者',
+  `inheritor` int(10) NOT NULL COMMENT '继承者',
+  `build_time` int(10) NOT NULL DEFAULT '0' COMMENT '转移时间',
+  `valid_time` int(10) NOT NULL DEFAULT '0' COMMENT '权限剩余有效期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bbs_auth_transfer
+-- ----------------------------
+INSERT INTO `bbs_auth_transfer` VALUES ('3', '12', '8', '2', '1495162078', '82633');
+INSERT INTO `bbs_auth_transfer` VALUES ('4', '11', '8', '2', '1495163289', '81428');
+INSERT INTO `bbs_auth_transfer` VALUES ('5', '10', '8', '2', '1495163325', '38199');
+INSERT INTO `bbs_auth_transfer` VALUES ('6', '12', '2', '8', '1495163599', '81112');
+INSERT INTO `bbs_auth_transfer` VALUES ('7', '10', '2', '8', '1495165961', '35563');
+INSERT INTO `bbs_auth_transfer` VALUES ('8', '11', '2', '8', '1495166075', '78642');
+INSERT INTO `bbs_auth_transfer` VALUES ('9', '12', '8', '2', '1495166114', '78597');
 
 -- ----------------------------
 -- Table structure for bbs_category
@@ -752,14 +855,15 @@ CREATE TABLE `bbs_collection` (
   `uid` int(10) NOT NULL COMMENT '用户ID',
   `article_ids` text COMMENT '收藏的文章ID序列',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bbs_collection
 -- ----------------------------
 INSERT INTO `bbs_collection` VALUES ('1', '2', '18,22');
 INSERT INTO `bbs_collection` VALUES ('2', '1', '22,13,11,23,18');
-INSERT INTO `bbs_collection` VALUES ('3', '3', '22,23,13');
+INSERT INTO `bbs_collection` VALUES ('3', '3', '22');
+INSERT INTO `bbs_collection` VALUES ('4', '8', '23');
 
 -- ----------------------------
 -- Table structure for bbs_config
@@ -846,7 +950,7 @@ CREATE TABLE `bbs_document` (
   PRIMARY KEY (`id`),
   KEY `idx_category_status` (`category_id`,`status`),
   KEY `idx_status_type_pid` (`status`,`uid`,`pid`)
-) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COMMENT='文档模型基础表';
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COMMENT='文档模型基础表';
 
 -- ----------------------------
 -- Records of bbs_document
@@ -855,14 +959,15 @@ INSERT INTO `bbs_document` VALUES ('1', '1', '', 'OneThink1.0正式版发布', '
 INSERT INTO `bbs_document` VALUES ('2', '1', '', '电子公告牌系统', '2', '（电子公告板）一般指电子公告牌系统', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '10', '0', '0', '0', '1489371738', '1489371738', '1');
 INSERT INTO `bbs_document` VALUES ('18', '2', '', 'VUE （3D渲染解决方案产品）', '39', 'Vue系列产品为3D自然环境的动画制作和渲染提供了一系列的解决方案。Vue系列有很多不同的产品，这是为了满足不同阶层的用户的需要：可以满足专业的制作工作室，同样也能满足3D自由艺术家。', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '84', '0', '0', '0', '1489420365', '1489420365', '1');
 INSERT INTO `bbs_document` VALUES ('17', '1', '', 'jquery', '39', 'Query是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '16', '0', '0', '0', '1489417479', '1489417479', '1');
-INSERT INTO `bbs_document` VALUES ('13', '1', '', 'JS', '39', 'JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '12', '0', '0', '0', '1489416875', '1489416875', '1');
+INSERT INTO `bbs_document` VALUES ('13', '1', '', 'JS', '39', 'JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '11', '0', '0', '0', '1489416875', '1489416875', '1');
 INSERT INTO `bbs_document` VALUES ('12', '1', '', 'HTML', '2', '超文本标记语言，标准通用标记语言下的一个应用。', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '8', '0', '0', '0', '1489416518', '1489416518', '1');
 INSERT INTO `bbs_document` VALUES ('11', '1', '', 'CSS （层叠样式表）', '2', '层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '7', '0', '0', '0', '1489416305', '1489416305', '1');
 INSERT INTO `bbs_document` VALUES ('19', '2', '', 'react （软件行业名词）', '2', 'React 起源于 Facebook 的内部项目，因为该公司对市场上所有 JavaScript MVC 框架，都不满意，就决定自己写一套，用来架设Instagram 的网站。做出来以后，发现这套东西很好用，就在2013年5月开源了。', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '6', '0', '0', '0', '1489420547', '1489420547', '1');
 INSERT INTO `bbs_document` VALUES ('20', '2', '', 'C++', '2', 'C++是C语言的继承，它既可以进行C语言的过程化程序设计，又可以进行以抽象数据类型为特点的基于对象的程序设计，还可以进行以继承和多态为特点的面向对象的程序设计。C++擅长面向对象程序设计的同时，还可以进行基于过程的程序设计，因而C++就适应的问题规模而论，大小由之。', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '13', '0', '0', '0', '1489420739', '1489420739', '1');
 INSERT INTO `bbs_document` VALUES ('21', '2', '', 'Java', '2', 'Java是一门面向对象编程语言，不仅吸收了C++语言的各种优点，还摒弃了C++里难以理解的多继承、指针等概念，因此Java语言具有功能强大和简单易用两个特征。Java语言作为静态面向对象编程语言的代表，极好地实现了面向对象理论，允许程序员以优雅的思维方式进行复杂的编程', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '18', '0', '0', '0', '1489421275', '1489421275', '1');
-INSERT INTO `bbs_document` VALUES ('22', '2', '', 'PHP （超文本预处理器）', '2', 'PHP（外文名:PHP: Hypertext Preprocessor，中文名：“超文本预处理器”）是一种通用开源脚本语言。语法吸收了C语言、Java和Perl的特点，利于学习，使用广泛，主要适用于Web开发领域。PHP 独特的语法混合了C、Java、Perl以及PHP自创的语法', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '90', '0', '0', '0', '1489421375', '1489421375', '1');
-INSERT INTO `bbs_document` VALUES ('23', '2', '', 'Android百科', '40', 'Google公司开发的操作系统', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '6', '0', '0', '0', '1493439953', '1493439953', '1');
+INSERT INTO `bbs_document` VALUES ('22', '2', '', 'PHP （超文本预处理器）', '2', 'PHP（外文名:PHP: Hypertext Preprocessor，中文名：“超文本预处理器”）是一种通用开源脚本语言。语法吸收了C语言、Java和Perl的特点，利于学习，使用广泛，主要适用于Web开发领域。PHP 独特的语法混合了C、Java、Perl以及PHP自创的语法', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '88', '0', '0', '0', '1489421375', '1489421375', '1');
+INSERT INTO `bbs_document` VALUES ('23', '2', '', 'Android百科', '40', 'Google公司开发的操作系统', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '5', '0', '0', '0', '1493439953', '1493439953', '1');
+INSERT INTO `bbs_document` VALUES ('24', '8', '', 'Redis', '39', 'Redis是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库', '0', '0', '2', '2', '0', '0', '0', '1', '0', '0', '2', '0', '0', '0', '1493703773', '1493703773', '1');
 
 -- ----------------------------
 -- Table structure for bbs_document_article
@@ -884,7 +989,7 @@ INSERT INTO `bbs_document_article` VALUES ('1', '0', '<h1>\r\n	OneThink1.0正式
 INSERT INTO `bbs_document_article` VALUES ('2', '0', '电子公告牌系统<span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">（Bulletin Board System，英文缩写BBS）通过在计算机上运行服务软件，允许用户使用</span>终端<span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">程序通过</span>Internet<span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">来进行连接，执行下载数据或程序、上传数据、阅读新闻、与其它用户交换消息等功能。</span>', '', '0');
 INSERT INTO `bbs_document_article` VALUES ('11', '0', '<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	1990年，Tim Berners-Lee和Robert Cailliau共同发明了Web。1994年，Web真正走出实验室。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	从HTML被发明开始，样式就以各种形式存在。不同的浏览器结合它们各自的样式语言为用户提供页面效果的控制。最初的HTML只包含很少的显示属性。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	随着HTML的成长，为了满足页面设计者的要求，HTML添加了很多显示功能。但是随着这些功能的增加，HTML变的越来越杂乱，而且HTML页面也越来越臃肿。于是CSS便诞生了。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	1994年哈坤·利提出了CSS的最初建议。而当时伯特·波斯（<i>Bert Bos</i>）正在设计一个名为Argo的浏览器，于是他们决定一起设计CSS。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	其实当时在互联网界已经有过一些统一样式表语言的建议了，但CSS是第一个含有“层叠”丰意的样式表语言。在CSS中，一个文件的样式可以从其他的样式表中继承。读者在有些地方可以使用他自己更喜欢的样式，在其他地方则继承或“层叠”作者的样式。这种层叠的方式使作者和读者都可以灵活地加入自己的设计，混合每个人的爱好。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	哈坤于1994年在芝加哥的一次会议上第一次提出了CSS的建议，1995年的www网络会议上CSS又一次被提出，博斯演示了Argo浏览器支持CSS的例子，哈肯也展示了支持CSS的Arena浏览器。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	同年，W3C组织（<i>World WideWeb Consortium</i>）成立，CSS的创作成员全部成为了W3C的工作小组并且全力以赴负责研发CSS标准，层叠样式表的开发终于走上正轨。有越来越多的成员参与其中，例如微软公司的托马斯·莱尔顿(Thomas Reaxdon)，他的努力最终令Internet Explorer浏览器支持CSS标准。哈坤、波斯和其他一些人是这个项目的主要技术负责人。1996年底，CSS初稿已经完成，同年12月，层叠样式表的第一份正式标准（<i>Cascading style Sheets Level 1</i>）完成，成为w3c的推荐标准。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	1997年初，W3C组织负责CSS的工作组开始讨论第一版中没有涉及到的问题。其讨论结果组成了1998年5月出版的CSS规范第二版。\r\n</div>', '', '1');
 INSERT INTO `bbs_document_article` VALUES ('12', '0', '<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	万维网上的一个超媒体文档称之为一个页面（外语：page）。作为一个组织或者个人在万维网上放置开始点的页面称为主页（外语：Homepage）或首页，主页中通常包括有指向其他相关页面或其他节点的指针（超级链接），所谓超级链接，就是一种统一资源定位器（Uniform Resource Locator，外语缩写：URL）指针，通过激活（点击）它，可使浏览器方便地获取新的网页。这也是HTML获得广泛应用的最重要的原因之一。在逻辑上将视为一个整体的一系列页面的有机集合称为网站（Website或Site）。超级文本标记语言（英文缩写：HTML）是为“网页创建和其它可在网页浏览器中看到的信息”设计的一种标记语言。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	网页的本质就是超级文本标记语言，通过结合使用其他的Web技术（如：脚本语言、公共网关接口、组件等），可以创造出功能强大的网页。因而，超级文本标记语言是万维网（Web）编程的基础，也就是说万维网是建立在超文本基础之上的。超级文本标记语言之所以称为超文本标记语言，是因为文本中包含了所谓“超级链接”点。<span id=\"__kindeditor_bookmark_end_7__\"></span>\r\n</div>', '', '0');
-INSERT INTO `bbs_document_article` VALUES ('13', '0', '<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	JavaScript是一种属于网络的脚本语言,已经被广泛用于Web应用开发,常用来为网页添加各式各样的动态功能,为用户提供更流畅美观的浏览效果。通常JavaScript脚本是通过嵌入在HTML中来实现自身的功能的。\r\n</div>\r\n<ol class=\"custom_num  para-list list-paddingleft-1\" style=\"color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	<li class=\"list-num-1-1 list-num-paddingleft-1\">\r\n		<div class=\"para\" style=\"font-size:14px;margin-left:25px;\">\r\n			是一种解释性脚本语言（代码不进行预编译）。\r\n		</div>\r\n	</li>\r\n	<li class=\"list-num-1-2 list-num-paddingleft-1\">\r\n		<div class=\"para\" style=\"font-size:14px;margin-left:25px;\">\r\n			主要用来向HTML（标准通用标记语言下的一个应用）页面添加交互行为。\r\n		</div>\r\n	</li>\r\n	<li class=\"list-num-1-3 list-num-paddingleft-1\">\r\n		<div class=\"para\" style=\"font-size:14px;margin-left:25px;\">\r\n			可以直接嵌入HTML页面，但写成单独的js文件有利于结构和行为的分离。\r\n		</div>\r\n	</li>\r\n	<li class=\"list-num-1-4 list-num-paddingleft-1\">\r\n		<div class=\"para\" style=\"font-size:14px;margin-left:25px;\">\r\n			跨平台特性，在绝大多数浏览器的支持下，可以在多种平台下运行（如Windows、Linux、Mac、Android、iOS等）。\r\n		</div>\r\n	</li>\r\n</ol>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	Javascript脚本语言同其他语言一样，有它自身的基本数据类型，表达式和算术运算符及程序的基本程序框架。Javascript提供了四种基本的数据类型和两种特殊数据类型用来处理数据和文字。而变量提供存放信息的地方，表达式则可以完成较复杂的信息处理。\r\n</div>', '', '2');
+INSERT INTO `bbs_document_article` VALUES ('13', '0', '<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	JavaScript是一种属于网络的脚本语言,已经被广泛用于Web应用开发,常用来为网页添加各式各样的动态功能,为用户提供更流畅美观的浏览效果。通常JavaScript脚本是通过嵌入在HTML中来实现自身的功能的。\r\n</div>\r\n<ol class=\"custom_num  para-list list-paddingleft-1\" style=\"color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	<li class=\"list-num-1-1 list-num-paddingleft-1\">\r\n		<div class=\"para\" style=\"font-size:14px;margin-left:25px;\">\r\n			是一种解释性脚本语言（代码不进行预编译）。\r\n		</div>\r\n	</li>\r\n	<li class=\"list-num-1-2 list-num-paddingleft-1\">\r\n		<div class=\"para\" style=\"font-size:14px;margin-left:25px;\">\r\n			主要用来向HTML（标准通用标记语言下的一个应用）页面添加交互行为。\r\n		</div>\r\n	</li>\r\n	<li class=\"list-num-1-3 list-num-paddingleft-1\">\r\n		<div class=\"para\" style=\"font-size:14px;margin-left:25px;\">\r\n			可以直接嵌入HTML页面，但写成单独的js文件有利于结构和行为的分离。\r\n		</div>\r\n	</li>\r\n	<li class=\"list-num-1-4 list-num-paddingleft-1\">\r\n		<div class=\"para\" style=\"font-size:14px;margin-left:25px;\">\r\n			跨平台特性，在绝大多数浏览器的支持下，可以在多种平台下运行（如Windows、Linux、Mac、Android、iOS等）。\r\n		</div>\r\n	</li>\r\n</ol>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	Javascript脚本语言同其他语言一样，有它自身的基本数据类型，表达式和算术运算符及程序的基本程序框架。Javascript提供了四种基本的数据类型和两种特殊数据类型用来处理数据和文字。而变量提供存放信息的地方，表达式则可以完成较复杂的信息处理。\r\n</div>', '', '1');
 INSERT INTO `bbs_document_article` VALUES ('17', '0', '<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	2005年8月，John Resig提议改进Prototype的“Behaviour”库，于是他在blog上发表了自己的想法，并用了3个例子做简单的流程说明。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	第一个例子是为元素注册一个事件：\r\n</div>\r\n<pre class=\"brush: xml\">Behaviour.register({\r\n&nbsp;&nbsp;&nbsp;&nbsp;\'#example&nbsp;li\':&nbsp;function(e){\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.onclick&nbsp;=&nbsp;function(){\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.parentNode.removeChild(this);\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\r\n&nbsp;&nbsp;&nbsp;&nbsp;}\r\n});\r\n\r\n</pre>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	他认为应该改写为：\r\n</div>\r\n<pre class=\"brush: xml\">$(\'#example&nbsp;li\').bind(\'click\',function(){\r\n&nbsp;&nbsp;&nbsp;&nbsp;this.parentNode.removeChild(this);\r\n});\r\n\r\n&nbsp;&nbsp;&nbsp;&nbsp;第二个例子是为不同的元素注册不同的事件：\r\n</pre>\r\n<pre class=\"brush: xml\">Behaviour.register({\r\n&nbsp;&nbsp;&nbsp;&nbsp;\'b.someclass\'&nbsp;:&nbsp;function(e){\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.onclick&nbsp;=&nbsp;function(){\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(this.innerHTML);\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\r\n&nbsp;&nbsp;&nbsp;&nbsp;},\r\n&nbsp;&nbsp;&nbsp;&nbsp;\'#someid&nbsp;u\'&nbsp;:&nbsp;function(e){\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.onmouseover&nbsp;=&nbsp;function(){\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.innerHTML&nbsp;=&nbsp;\"BLAH!\";\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}\r\n&nbsp;&nbsp;&nbsp;&nbsp;}\r\n});\r\n\r\n</pre>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	他认为应该改写为：\r\n</div>\r\n<pre class=\"brush: xml\">$(\'b.someclass\').bind(\'click\',function(){\r\n&nbsp;&nbsp;&nbsp;&nbsp;alert(this.innerHTML);\r\n});\r\n$(\'#someid&nbsp;u\').bind(\'mouseover\',function(){\r\n&nbsp;&nbsp;&nbsp;&nbsp;this.innerHTML&nbsp;=&nbsp;\'BLAH!\';\r\n});\r\n\r\n</pre>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	第三个例子是为不断变化的元素注册不同的事件：\r\n</div>\r\n<pre class=\"brush: xml\">Behaviour.register({\r\n&nbsp;&nbsp;&nbsp;&nbsp;\'#foo&nbsp;ol&nbsp;li\':&nbsp;function(a)&nbsp;{\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.title&nbsp;=&nbsp;\"List&nbsp;Items!\";\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.onclick&nbsp;=&nbsp;function(){&nbsp;alert(\'Hello!\');&nbsp;};\r\n&nbsp;&nbsp;&nbsp;&nbsp;},\r\n&nbsp;&nbsp;&nbsp;&nbsp;\'#foo&nbsp;ol&nbsp;li.tmp\':&nbsp;function(a)&nbsp;{\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.style.color&nbsp;=&nbsp;\'white\';\r\n&nbsp;&nbsp;&nbsp;&nbsp;},\r\n&nbsp;&nbsp;&nbsp;&nbsp;\'#foo&nbsp;ol&nbsp;li.tmp&nbsp;.foo\':&nbsp;function(a)&nbsp;{\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a.style.background&nbsp;=&nbsp;\'red\';\r\n}\r\n});\r\n\r\n</pre>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	他认为应该改写为：\r\n</div>\r\n<pre class=\"brush: xml\">$(\'#foo&nbsp;ol&nbsp;li\')\r\n&nbsp;&nbsp;&nbsp;&nbsp;.set(\'title\',\'List&nbsp;Items!\')\r\n&nbsp;&nbsp;&nbsp;&nbsp;.bind(\'click\',function(){&nbsp;alert(\'Hello!\');&nbsp;})\r\n&nbsp;&nbsp;&nbsp;&nbsp;.select(\'.tmp\')\r\n&nbsp;&nbsp;&nbsp;&nbsp;.style(\'color\',\'white\')\r\n&nbsp;&nbsp;&nbsp;&nbsp;.select(\'.foo\')\r\n&nbsp;&nbsp;&nbsp;&nbsp;.style(\'background\',\'red\');\r\n\r\n</pre>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	这些代码也是jQuery语法的最初雏形。当时John的想法很简单：他发现这种语法相对现有的JavaScript库更为简洁。但他没想到的是，这篇文章一经发布就引起了业界的关注。于是John开始认真思考着这件事情（<i>编写语法更为简洁的JavaScript程序库</i>），直到2006年1月14日，John正式宣布以jQuery的名称发布自己的程序库。随之而来的是jQuery的快速发展。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	2006年1月John Resig等入创建了jQuery；8月，jQuery的第一个稳定版本，并且已经支持CSS选择符、事件处理和AJAX交互。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	2007年7月，jQuery 1.1.3版发布，这次小版本的变化包含了对jQuery选择符引擎执行速度的显著提升。从这个版本开始，jQuery的性能达到了Prototype、Mootools以及Dojo等同类JavaScript库的水平。同年9月，jQuery 1.2版发布，它去掉了对XPath选择符的支持，原因是相对于CSS语法它已经变得多余了。这一版能够对效果进行更为灵活的定制，而且借助新增的命名空间事件，也使插件开发变得更容易。同时，jQuery UI项目也开始启动，这个新的套件是作为曾经流行但已过时的Interface插件的替代项目而发布的。jQuery UI中包含大量预定义好的部件（<i>widge</i>t），以及一组用于构建高级元素（<i>例如可拖放、拖拽、排序</i>）的工具。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	2008年5月，jQuery 1.2.6版发布，这版主要是将Brandon Aaron开发的流行的Dimensions插件的功能移植到了核心库中，同时也修改了许多BUG，而且有不少的性能得到提高。因此，如果以前的jQuery版本升级到1.2.6，那么完全可以从代码中排除Dimensions插件（<i>一个获得元素尺寸、定位的插件</i>）。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	在jQuery迅速发展的同时，一些大的厂商也看中了商机。2009年9月，微软和诺基亚公司正式宣布支持开源的jQuery库，另外，微软公司还宣称他们将把jQuery作为Visual Studio工具集的一部分。他将提供包括jQuery的智能提示、代码片段、示例文档编制等内容在内的功能。微软和诺基亚公司将长期成为jQuery的用户成员，其他成员还有Google，Intel，IBM，Intuit等公司。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	2009年1月，jQuery 1.3版发布，它使用了全新的选择符引擎Sizzle，在各个浏览器下全面超越其他同类型JavaScript框架的查询速度，程序库的性能也因此有了极大提升。这一版本的第2个变化就是提供live()方法，使用live()方法可以为当前及将来增加的元素绑定事件，在1.3版之前，如果要为将来增加的元素绑定事件，需要使用livequery插件，而在1.3版中，可以直接用live()方法。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	2010年1月，也是jQuery的四周年生日，jQuery 1.4版发布，为了庆祝jQuery四周岁生日，jQuery团队特别创建了jquery14.com站点，带来了连续14天的新版本专题介绍。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	在1.3及更早版本中，jQuery通过JavaScript的eval方法来解析json对象。在1.4中，如果你用的浏览器支持，则会使用原生的JSON.parse解析json对象，这样对json对象的书写验证则更为严格。比如：{foo: \"bar\"}的写法将不会被验证为合法的json对象，必须写成{\"foo\":\"bar\"}。如果你的程序打算升级到1.4版本，那么这一点要尤其注意。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	2010年2月，jQuery 1.4.2版发布，它新增了有关事件委托的两个方法：delegate()和undelegate()。delegate()用于替代1.3.2中的live()方法。这个方法比live()来的方便，而且也可以达到动态添加事件的作用。比如给表格的每个td绑定hover事件，代码如下：\r\n</div>\r\n<pre class=\"brush: xml\">//1.4.2\r\n$(\"table\").delegate(\"td\",&nbsp;\"hover\",&nbsp;function(){\r\n&nbsp;&nbsp;&nbsp;&nbsp;$(this).toggleClass(\"hover\");\r\n});\r\n//1.3.2\r\n$(\"table\").each(function(){\r\n&nbsp;&nbsp;&nbsp;&nbsp;$(\"td\",&nbsp;this).live(\"hover\",&nbsp;function(){\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(this).toggleClass(\"hover\");\r\n&nbsp;&nbsp;&nbsp;&nbsp;});\r\n});\r\n\r\n</pre>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	2011年1月，jQuery 1.5版发布。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	2011年11月，jQuery 1.7版发布。\r\n</div>', '', '0');
 INSERT INTO `bbs_document_article` VALUES ('18', '0', '<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	在了解VUE之前，先弄清<a target=\"_blank\" href=\"http://baike.baidu.com/item/PEARSON\">PEARSON</a>和PEARSON EDUCATION 。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	PEARSON是一家大型的跨国传媒公司，在教育、出版和商务信息领域一直居于世界领先地位，其主要品牌有：时代财经、培生教育和企鹅出版社。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	PEARSON EDUCATION是PEARSON旗下的从事教育和出版行业的机构。迄今，已为全球超过1亿人提供了培训，是教育、出版一体化领域的佼佼者。拥有PEARSON PRENTICE HALL、PEARSON LONGMAN 、PEARSON SCOTT FORESMAN等知名品牌，PEARSON EDUCATION将继续面向世界，利用各种媒介手段源源不断地提供高质量的读物、实用的评估工具和先进的教育服务。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	PEARSON VUE 则是PEARSON EDUCATION旗下的从事电子化考试服务的机构，它致力于依靠快捷的互联网，先进的计算机技术及优质的服务为你提供安全、可靠且实用的国际认证考试和安全职业执照及认证程序。其发展速度之迅猛，主要得益于IT技术的飞速发展、得益于IT认证浪潮的推动。能发送如微软(当前微软的认证考试已经完全由普尔文代理）、IBM、思科等30多个厂商的考试，同时在考试通过后，又能得到这30多个厂商的认证。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	接下来谈谈如何获得这样的认证及有何好处。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	PEARSON VUE在全球150多个国家设有3400多个考试机构，在中国设有150多个考点。微软、IBM等各大厂商并不直接进行考试，而是授权PEARSON VUE，由它来组织考试。任何考生只有在通过考试后，方可得到厂商的认证或认可，才能获得各大厂商颁发的国际通用的、权威性的证书。持有这样一本证书，就好比持有一本国际通行证，可以到国外或国内的任何公司去求职。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	在中国的考试则由各省区的考点负责。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	VUE (Virtual University Enterprises) 是NCS Pearson 的一个分部，它通过分布在110\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	多个国家（或地区）的全球考试中心网络提供全部的MCP 考试。\r\n</div>', '', '2');
 INSERT INTO `bbs_document_article` VALUES ('19', '0', '<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	由于 React的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。所以，越来越多的人开始关注和使用，认为它可能是将来 Web 开发的主流工具。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	这个项目本身也越滚越大，从最早的UI引擎变成了一整套前后端通吃的 Web App 解决方案。衍生的 React Native 项目，目标更是宏伟，希望用写 Web App 的方式去写 Native App。如果能够实现，整个互联网行业都会被颠覆，因为同一组人只需要写一次 UI ，就能同时运行在服务器、浏览器和手机。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	React主要用于构建UI。你可以在React里传递多种类型的参数，如声明代码，帮助你渲染出UI、也可以是静态的HTML DOM元素、也可以传递动态变量、甚至是可交互的应用组件。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	<span style=\"font-weight:700;\">特点：</span>\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	1.声明式设计：React采用声明范式，可以轻松描述应用。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	2.高效：React通过对DOM的模拟，最大限度地减少与DOM的交互。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	3.灵活：React可以与已知的库或框架很好地配合。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	<span style=\"font-weight:700;\">示例[1]<a name=\"ref_[1]_18254484\"></a>&nbsp;</span>\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	下面这段代码将会在在页面容器中呈现出“Hello Tom”：\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	<span style=\"font-weight:700;\">[xml]</span>view plain<a target=\"_blank\" href=\"http://baike.baidu.com/item/copy\">copy</a>\r\n</div>\r\n<ol class=\"custom_num para-list list-paddingleft-1\" style=\"color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	<li class=\"list-num-1-1 list-num-paddingleft-1\">\r\n		<div class=\"para\" style=\"font-size:14px;margin-left:25px;\">\r\n			/**@jsxReact.DOM*/\r\n		</div>\r\n	</li>\r\n	<li class=\"list-num-1-2 list-num-paddingleft-1\">\r\n		<div class=\"para\" style=\"font-size:14px;margin-left:25px;\">\r\n			varHelloMsg=React.createClass({\r\n		</div>\r\n	</li>\r\n	<li class=\"list-num-1-3 list-num-paddingleft-1\">\r\n		<div class=\"para\" style=\"font-size:14px;margin-left:25px;\">\r\n			render:function(){\r\n		</div>\r\n	</li>\r\n	<li class=\"list-num-1-4 list-num-paddingleft-1\">\r\n		<div class=\"para\" style=\"font-size:14px;margin-left:25px;\">\r\n			return&lt;div&gt;{\'Hello\'+this.props.name}&lt;/div&gt;;\r\n		</div>\r\n	</li>\r\n	<li class=\"list-num-1-5 list-num-paddingleft-1\">\r\n		<div class=\"para\" style=\"font-size:14px;margin-left:25px;\">\r\n			}});\r\n		</div>\r\n	</li>\r\n	<li class=\"list-num-1-6 list-num-paddingleft-1\">\r\n		<div class=\"para\" style=\"font-size:14px;margin-left:25px;\">\r\n			React.renderComponent(&lt;HelloMsg name=\"Tom\"/&gt;,mountNode);\r\n		</div>\r\n	</li>\r\n</ol>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	该例使用一个类似XML语法的JSX来构建组件，实现一个render()方法，并且根据输入的数据返回相应的结果。输入的数据作为XML属性传递给组件，render()方法通过this.props访问这些输入的数据。\r\n</div>', '', '0');
@@ -892,6 +997,7 @@ INSERT INTO `bbs_document_article` VALUES ('20', '0', '<div class=\"para\" style
 INSERT INTO `bbs_document_article` VALUES ('21', '0', '<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	20世纪90年代，硬件领域出现了单片式计算机系统，这种价格低廉的系统一出现就立即引起了自动控制领域人员的注意，因为使用它可以大幅度提升消费类电子产品<i>（如电视机顶盒、面包烤箱、移动电话等）</i>的<a target=\"_blank\" href=\"http://baike.baidu.com/view/335547.htm\">智能化</a>程度。Sun公司为了抢占市场先机，在1991年成立了一个称为Green的项目小组，<a target=\"_blank\" href=\"http://baike.baidu.com/subview/987192/17552361.htm\">帕特里克</a>、<a target=\"_blank\" href=\"http://baike.baidu.com/view/4814505.htm\">詹姆斯·高斯林</a>、麦克·舍林丹和其他几个工程师一起组成的工作小组在<a target=\"_blank\" href=\"http://baike.baidu.com/view/269543.htm\">加利福尼亚</a>州<a target=\"_blank\" href=\"http://baike.baidu.com/view/5965801.htm\">门洛帕克</a>市沙丘路的一个小工作室里面研究开发新技术，专攻计算机在家电产品上的嵌入式应用。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	由于<a target=\"_blank\" href=\"http://baike.baidu.com/view/824.htm\">C++</a>所具有的优势，该项目组的研究人员首先考虑采用C++来编写程序。但对于<a target=\"_blank\" href=\"http://baike.baidu.com/view/25278.htm\">硬件</a>资源极其匮乏的单片式系统来说，C++程序过于复杂和庞大。另外由于消费电子产品所采用的嵌入式处理器芯片的种类繁杂，如何让编写的程序<a target=\"_blank\" href=\"http://baike.baidu.com/view/469855.htm\">跨平台</a>运行也是个难题。为了解决困难，他们首先着眼于语言的开发，假设了一种结构简单、符合嵌入式应用需要的硬件平台体系结构并为其制定了相应的规范，其中就定义了这种硬件平台的<a target=\"_blank\" href=\"http://baike.baidu.com/view/18536.htm\">二进制</a>机器码指令系统<i>（即后来成为“</i><a target=\"_blank\" href=\"http://baike.baidu.com/view/560330.htm\"><i>字节码</i></a><i>”的指令系统）</i>，以待语言开发成功后，能有<a target=\"_blank\" href=\"http://baike.baidu.com/view/557684.htm\">半导体芯片</a>生产商开发和生产这种硬件平台。对于新语言的设计，Sun公司研发人员并没有开发一种全新的语言，而是根据嵌入式软件的要求，对C++进行了改造，去除了留在C++的一些不太实用及影响安全的成分，并结合嵌入式系统的实时性要求，开发了一种称为<a target=\"_blank\" href=\"http://baike.baidu.com/view/180796.htm\">Oak</a>的<a target=\"_blank\" href=\"http://baike.baidu.com/view/7847.htm\">面向对象语言</a>。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	由于在开发Oak语言时，尚且不存在运行字节码的硬件平台，所以为了在开发时可以对这种语言进行实验研究，他们就在已有的硬件和软件平台基础上，按照自己所指定的规范，用软件建设了一个运行平台，整个系统除了比C++更加简单之外，没有什么大的区别。1992年的夏天，当Oak语言开发成功后，研究者们向硬件生产商进行演示了Green操作系统、Oak的程序设计语言、类库和其硬件，以说服他们使用Oak语言生产硬件芯片，但是，硬件生产商并未对此产生极大的热情。因为他们认为，在所有人对Oak语言还一无所知的情况下，就生产硬件产品的风险实在太大了，所以Oak语言也就因为缺乏硬件的支持而无法进入市场，从而被搁置了下来。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	1994年6、7月间，在经历了一场历时三天的讨论之后，团队决定再一次改变了努力的目标，这次他们决定将该技术应用于<a target=\"_blank\" href=\"http://baike.baidu.com/view/7833.htm\">万维网</a>。他们认为随着<a target=\"_blank\" href=\"http://baike.baidu.com/view/209570.htm\">Mosaic</a>浏览器的到来，<a target=\"_blank\" href=\"http://baike.baidu.com/view/1706.htm\">因特网</a>正在向同样的高度互动的<a target=\"_blank\" href=\"http://baike.baidu.com/view/45465.htm\">远景</a>演变，而这一远景正是他们在有线电视网中看到的。作为原型，帕特里克·诺顿写了一个小型万维网浏览器WebRunner。[4]<a name=\"ref_[4]_12654100\"></a>&nbsp;\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	1995年，互联网的蓬勃发展给了Oak机会。业界为了使死板、单调的静态网页能够“灵活”起来，急需一种软件技术来开发一种程序，这种程序可以通过网络传播并且能够跨平台运行。于是，世界各大<a target=\"_blank\" href=\"http://baike.baidu.com/subview/30/16685180.htm\">IT</a>企业为此纷纷投入了大量的人力、物力和财力。这个时候，Sun公司想起了那个被搁置起来很久的Oak，并且重新审视了那个用软件编写的试验平台，由于它是按照按照嵌入式系统硬件平台体系结构进行编写的，所以非常小，特色适用于网络上的传输系统，而Oak也是一种精简的语言，程序非常小，适合在网络上传输。Sun公司首先推出了可以嵌入网页并且可以随同网页在网络上传输的<a target=\"_blank\" href=\"http://baike.baidu.com/view/150834.htm\">Applet</a><i>（Applet是一种将小程序嵌入到网页中进行执行的技术）</i>，并将Oak更名为Java<i>（在申请注册商标时，发现Oak已经被人使用了，再想了一系列名字之后，最终，使用了提议者在喝一杯Java咖啡时无意提到的Java词语）</i>。5月23日，Sun公司在Sun world会议上正式发布Java和HotJava浏览器。<a target=\"_blank\" href=\"http://baike.baidu.com/subview/1937/5817096.htm\">IBM</a>、<a target=\"_blank\" href=\"http://baike.baidu.com/subview/14874/5822958.htm\">Apple</a>、<a target=\"_blank\" href=\"http://baike.baidu.com/view/270611.htm\">DEC</a>、<a target=\"_blank\" href=\"http://baike.baidu.com/view/7578.htm\">Adobe</a>、<a target=\"_blank\" href=\"http://baike.baidu.com/view/18228.htm\">HP</a>、<a target=\"_blank\" href=\"http://baike.baidu.com/view/15020.htm\">Oracle</a>、<a target=\"_blank\" href=\"http://baike.baidu.com/view/153922.htm\">Netscap<span style=\"font-weight:700;\">e</span></a>和<a target=\"_blank\" href=\"http://baike.baidu.com/view/2353.htm\">微软</a>等各大公司都纷纷停止了自己的相关开发项目，竞相购买了Java使用许可证，并为自己的产品开发了相应的Java平台。[5-6]<a name=\"ref_[5-6]_12654100\"></a>&nbsp;<a name=\"ref_6\"></a> \r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	1996年1月，Sun公司发布了Java的第一个开发工具包<i>（JDK 1.0）</i>，这是Java发展历程中的重要里程碑，标志着Java成为一种独立的开发工具。9月，约8.3万个网页应用了Java技术来制作。10月，Sun公司发布了Java平台的第一个即时<i>（JIT）</i>编译器。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	1997年2月，JDK 1.1面世，在随后的3周时间里，达到了22万次的下载量。4月2日，Java One会议召开，参会者逾一万人，创当时全球同类会议规模之纪录。9月，Java Developer Connection社区成员超过10万。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	1998年12月8日，第二代Java平台的企业版J2EE发布。1999年6月，Sun公司发布了第二代Java平台（简称为Java2）的3个版本：<a target=\"_blank\" href=\"http://baike.baidu.com/view/7125.htm\">J2ME</a>（Java2 Micro Edition，Java2平台的微型版），应用于移动、无线及有限资源的环境；<a target=\"_blank\" href=\"http://baike.baidu.com/view/160728.htm\">J2SE</a>（Java 2 Standard Edition，Java 2平台的标准版），应用于桌面环境；<a target=\"_blank\" href=\"http://baike.baidu.com/view/1507.htm\">J2EE</a>（Java 2Enterprise Edition，Java 2平台的企业版），应用于基于Java的应用服务器。Java 2平台的发布，是Java发展过程中最重要的一个里程碑，标志着Java的应用开始普及。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	1999年4月27日，HotSpot虚拟机发布。<a target=\"_blank\" href=\"http://baike.baidu.com/view/426539.htm\">HotSpot</a>虚拟机发布时是作为JDK 1.2的附加程序提供的，后来它成为了JDK 1.3及之后所有版本的Sun JDK的默认虚拟机[7]<a name=\"ref_[7]_12654100\"></a>&nbsp;&nbsp;。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	2000年5月，JDK1.3、JDK1.4和J2SE1.3相继发布，几周后其获得了<a target=\"_blank\" href=\"http://baike.baidu.com/subview/14874/5822958.htm\">Apple</a>公司Mac OS X的工业标准的支持。2001年9月24日，J2EE1.3发布。2002年2月26日，J2SE1.4发布。自此Java的计算能力有了大幅提升，与J2SE1.3相比，其多了近62%的类和接口。在这些新特性当中，还提供了广泛的<a target=\"_blank\" href=\"http://baike.baidu.com/view/63.htm\">XML</a>支持、安全套接字<i>（Socket）</i>支持<i>（通过SSL与TLS协议）</i>、全新的I/OAPI、正则表达式、日志与断言。2004年9月30日，J2SE1.5发布，成为Java语言发展史上的又一里程碑。为了表示该版本的重要性，J2SE 1.5更名为Java SE 5.0<i>（内部版本号1.5.0）</i>，代号为“Tiger”，Tiger包含了从1996年发布1.0版本以来的最重大的更新，其中包括泛型支持、基本类型的自动装箱、改进的循环、枚举类型、格式化I/O及可变参数。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	2005年6月，在Java One大会上，Sun公司发布了Java SE 6。此时，Java的各种版本已经更名，已取消其中的数字2，如J2EE更名为<a target=\"_blank\" href=\"http://baike.baidu.com/view/169790.htm\">JavaEE</a>，J2SE更名为JavaSE，J2ME更名为<a target=\"_blank\" href=\"http://baike.baidu.com/view/1560387.htm\">JavaME</a>。[8]<a name=\"ref_[8]_12654100\"></a>&nbsp;\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	2006年11月13日，Java技术的发明者Sun公司宣布，将Java技术作为免费软件对外发布。Sun公司正式发布的有关Java平台标准版的第一批源代码，以及Java迷你版的可执行源代码。从2007年3月起，全世界所有的开发人员均可对Java源代码进行修改[9]<a name=\"ref_[9]_12654100\"></a>&nbsp;&nbsp;。\r\n</div>\r\n<div class=\"para\" style=\"font-size:14px;color:#333333;font-family:arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n	<div class=\"lemma-picture text-pic layout-right\" style=\"border:1px solid #E0E0E0;margin:0px 0px 3px;\">\r\n		<a class=\"image-link\" href=\"http://baike.baidu.com/pic/Java/85979/0/a8ec8a13632762d04989f67ca7ec08fa503dc6ba?fr=lemma&amp;ct=single\" target=\"_blank\"><img class=\"\" src=\"http://g.hiphotos.baidu.com/baike/s%3D220/sign=b4dfd4eaecc4b7453094b014fffd1e78/a8ec8a13632762d04989f67ca7ec08fa503dc6ba.jpg\" alt=\"Java创始人之一：詹姆斯·高斯林\" style=\"width:220px;height:208px;\" /></a><span class=\"description\" style=\"color:#555555;font-size:12px;font-family:宋体;line-height:15px;\">Java创始人之一：詹姆斯·高斯林</span> \r\n	</div>\r\n2009年，甲骨文公司宣布收购Sun[10]<a name=\"ref_[10]_12654100\"></a>&nbsp;&nbsp;。2010年，Java编程语言的共同创始人之一詹姆斯·高斯林从Oracle公司辞职。2011年，甲骨文公司举行了全球性的活动，以庆祝Java7的推出，随后Java7正式发布。2014年，甲骨文公司发布了Java8正式版[\r\n</div>', '', '0');
 INSERT INTO `bbs_document_article` VALUES ('22', '0', '<span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">&nbsp; PHP原始为Personal Home Page的缩写，已经正式更名为 \"PHP: Hypertext Preprocessor\"。注意不是“Hypertext Preprocessor”的缩写，这种将名称放到定义中的写法被称作</span><a target=\"_blank\" href=\"http://baike.baidu.com/view/5034635.htm\">递归缩写</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">。PHP于1994年由</span><a target=\"_blank\" href=\"http://baike.baidu.com/view/2116568.htm\">Rasmus Lerdorf</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">创建，刚刚开始是</span><a target=\"_blank\" href=\"http://baike.baidu.com/view/2116568.htm\">Rasmus Lerdorf</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">为了要</span><a target=\"_blank\" href=\"http://baike.baidu.com/view/1123731.htm\">维护</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">个人网页而制作的一个简单的用</span><a target=\"_blank\" href=\"http://baike.baidu.com/view/46614.htm\">Perl</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">语言编写的程序。这些工具程序用来显示 Rasmus Lerdorf 的个人履历，以及统计网页流量。后来又用</span><a target=\"_blank\" href=\"http://baike.baidu.com/view/1219.htm\">C语言</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">重新编写，包括可以访问</span><a target=\"_blank\" href=\"http://baike.baidu.com/view/1088.htm\">数据库</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">。他将这些程序和一些</span><a target=\"_blank\" href=\"http://baike.baidu.com/view/296684.htm\">表单</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">直译器整合起来，称为 PHP/FI。PHP/FI 可以和</span><a target=\"_blank\" href=\"http://baike.baidu.com/view/1088.htm\">数据库</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">连接，产生简单的</span><a target=\"_blank\" href=\"http://baike.baidu.com/view/348756.htm\">动态网页</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">程序。</span>', '', '3');
 INSERT INTO `bbs_document_article` VALUES ('23', '0', '<span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">Android是一种基于</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/Linux\">Linux</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">的自由及开放源代码的</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F\">操作系统</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">，主要使用于</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87\">移动设备</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">，如</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E6%99%BA%E8%83%BD%E6%89%8B%E6%9C%BA\">智能手机</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">和</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E5%B9%B3%E6%9D%BF%E7%94%B5%E8%84%91\">平板电脑</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">，由</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/Google\">Google</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">公司和</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E5%BC%80%E6%94%BE%E6%89%8B%E6%9C%BA%E8%81%94%E7%9B%9F\">开放手机联盟</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">领导及开发。尚未有统一中文名称，中国大陆地区较多人使用“</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E5%AE%89%E5%8D%93\">安卓</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">”或“</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E5%AE%89%E8%87%B4\">安致</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">”。Android操作系统最初由</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/Andy%20Rubin\">Andy Rubin</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">开发，主要支持</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E6%89%8B%E6%9C%BA/6342\">手机</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">。2005年8月由Google收购注资。2007年11月，Google与84家硬件制造商、软件开发商及电信营运商组建开放手机联盟共同研发改良Android系统。随后Google以Apache开源许可证的授权方式，发布了Android的源代码。第一部Android智能手机发布于2008年10月。Android逐渐扩展到</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E5%B9%B3%E6%9D%BF%E7%94%B5%E8%84%91\">平板电脑</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">及其他领域上，如</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E7%94%B5%E8%A7%86\">电视</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">、</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E6%95%B0%E7%A0%81%E7%9B%B8%E6%9C%BA\">数码相机</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">、</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E6%B8%B8%E6%88%8F%E6%9C%BA\">游戏机</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">等。2011年第一季度，Android在全球的市场份额首次超过</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E5%A1%9E%E7%8F%AD%E7%B3%BB%E7%BB%9F\">塞班系统</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">，跃居全球第一。 2013年的第四季度，Android平台手机的全球市场份额已经达到78.1%。</span>[1]&nbsp;<span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">&nbsp;2013年09月24日谷歌开发的操作系统Android在迎来了5岁生日，全世界采用这款系统的设备数量已经达到10亿台。</span>', '', '2');
+INSERT INTO `bbs_document_article` VALUES ('24', '0', '<span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">redis是一个key-value</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F\">存储系统</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">。和Memcached类似，它支持存储的value类型相对更多，包括string(字符串)、list(</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E9%93%BE%E8%A1%A8\">链表</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">)、set(集合)、zset(sorted set --有序集合)和hash（哈希类型）。这些</span><a target=\"_blank\" href=\"http://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B\">数据类型</a><span style=\"color:#333333;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF;\">都支持push/pop、add/remove及取交集并集和差集及更丰富的操作，而且这些操作都是原子性的。在此基础上，redis支持各种不同方式的排序。与memcached一样，为了保证效率，数据都是缓存在内存中。区别的是redis会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，并且在此基础上实现了master-slave(主从)同步。</span>', '', '0');
 
 -- ----------------------------
 -- Table structure for bbs_document_download
@@ -911,6 +1017,36 @@ CREATE TABLE `bbs_document_download` (
 -- ----------------------------
 -- Records of bbs_document_download
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for bbs_dynamic_auth
+-- ----------------------------
+DROP TABLE IF EXISTS `bbs_dynamic_auth`;
+CREATE TABLE `bbs_dynamic_auth` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `uid` int(10) DEFAULT NULL COMMENT '用户ID',
+  `apply_auth` varchar(255) DEFAULT NULL COMMENT '申请的权限',
+  `apply_valid_date` int(11) DEFAULT '1' COMMENT '申请权限使用期，1:一个小时，2:三个小时，3:十二小时，4:二十四小时',
+  `application_reason` text COMMENT '申请理由',
+  `application_date` int(10) DEFAULT NULL COMMENT '申请时间',
+  `deal_time` int(10) DEFAULT NULL COMMENT '处理申请的时间',
+  `status` varchar(255) DEFAULT NULL COMMENT '申请状态，a: 待审，b: 同意，c: 拒绝',
+  `valid` int(1) DEFAULT '0' COMMENT '申请的权限是否有效，0：无效，1：有效',
+  `performer` int(10) DEFAULT NULL COMMENT '权限执行者',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bbs_dynamic_auth
+-- ----------------------------
+INSERT INTO `bbs_dynamic_auth` VALUES ('5', '2', '41,28,29,30,31,32,33,34,35,36,37,38,39,40,94,95', '1', '申请临时权限管理', '1495095048', '1495095105', 'b', '0', '2');
+INSERT INTO `bbs_dynamic_auth` VALUES ('6', '2', '41,28,29,30,31,32,33,34,35,36,37,38,39,40,94,95', '1', '测试权限回收', '1495106587', '1495106610', 'b', '0', '2');
+INSERT INTO `bbs_dynamic_auth` VALUES ('7', '2', '41,28,29,30,31,32,33,34,35,36,37,38,39,40,94,95', '1', '', '1495114805', '1495114949', 'b', '0', '2');
+INSERT INTO `bbs_dynamic_auth` VALUES ('8', '2', '55,209,210', '2', '测试权限转移', '1495114843', '1495114942', 'b', '0', '2');
+INSERT INTO `bbs_dynamic_auth` VALUES ('9', '2', '54,42,43,44,45,46,47,48,49,50,51,52,53', '2', '测试权限转移。', '1495114860', '1495114936', 'b', '0', '2');
+INSERT INTO `bbs_dynamic_auth` VALUES ('10', '8', '54,42,43,44,45,46,47,48,49,50,51,52,53', '3', '权限转移测试。', '1495158239', '1495158324', 'b', '1', '8');
+INSERT INTO `bbs_dynamic_auth` VALUES ('11', '8', '55,209,210', '4', '测试', '1495158255', '1495158317', 'b', '1', '8');
+INSERT INTO `bbs_dynamic_auth` VALUES ('12', '8', '41,28,29,30,31,32,33,34,35,36,37,38,39,40,94,95', '4', '测试测试', '1495158278', '1495158311', 'b', '1', '2');
 
 -- ----------------------------
 -- Table structure for bbs_file
@@ -985,18 +1121,19 @@ CREATE TABLE `bbs_member` (
   `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '会员状态',
   PRIMARY KEY (`uid`),
   KEY `status` (`status`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='会员表';
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='会员表';
 
 -- ----------------------------
 -- Records of bbs_member
 -- ----------------------------
-INSERT INTO `bbs_member` VALUES ('1', 'admin', '0', '0000-00-00', '', '120', '57', '0', '1489332473', '3085702124', '1493462543', '1');
-INSERT INTO `bbs_member` VALUES ('2', 'hfhui', '0', '0000-00-00', '', '100', '20', '0', '1489420285', '0', '1493439892', '1');
-INSERT INTO `bbs_member` VALUES ('3', 'abc', '0', '0000-00-00', '', '20', '4', '0', '1493306054', '3085702124', '1493462593', '1');
+INSERT INTO `bbs_member` VALUES ('1', 'admin', '0', '0000-00-00', '', '170', '87', '0', '1489332473', '0', '1495163348', '1');
+INSERT INTO `bbs_member` VALUES ('2', 'hfhui', '0', '0000-00-00', '', '130', '38', '0', '1489420285', '0', '1495163374', '1');
+INSERT INTO `bbs_member` VALUES ('3', 'abc', '0', '0000-00-00', '', '10', '2', '0', '1493306054', '0', '1493306156', '1');
 INSERT INTO `bbs_member` VALUES ('4', 'abcd', '0', '0000-00-00', '', '10', '1', '0', '1493306137', '0', '1493306137', '1');
 INSERT INTO `bbs_member` VALUES ('5', '123', '0', '0000-00-00', '', '10', '1', '0', '1493306427', '0', '1493306427', '1');
 INSERT INTO `bbs_member` VALUES ('6', '12345', '0', '0000-00-00', '', '10', '1', '0', '1493306701', '0', '1493306701', '1');
 INSERT INTO `bbs_member` VALUES ('7', '1234', '0', '0000-00-00', '', '10', '1', '0', '1493306752', '0', '1493306752', '1');
+INSERT INTO `bbs_member` VALUES ('8', 'test', '0', '0000-00-00', '', '30', '6', '0', '1493703590', '0', '1495166087', '1');
 
 -- ----------------------------
 -- Table structure for bbs_menu
@@ -1014,7 +1151,7 @@ CREATE TABLE `bbs_menu` (
   `is_dev` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否仅开发者模式可见',
   PRIMARY KEY (`id`),
   KEY `pid` (`pid`)
-) ENGINE=MyISAM AUTO_INCREMENT=147 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=155 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bbs_menu
@@ -1035,9 +1172,9 @@ INSERT INTO `bbs_menu` VALUES ('13', '回收站', '2', '0', 'article/recycle', '
 INSERT INTO `bbs_menu` VALUES ('14', '还原', '13', '0', 'article/permit', '0', '', '', '0');
 INSERT INTO `bbs_menu` VALUES ('15', '清空', '13', '0', 'article/clear', '0', '', '', '0');
 INSERT INTO `bbs_menu` VALUES ('16', '用户', '0', '4', 'User/index', '0', '', '', '0');
-INSERT INTO `bbs_menu` VALUES ('17', '用户信息', '16', '0', 'User/index', '0', '', '用户管理', '0');
+INSERT INTO `bbs_menu` VALUES ('17', '用户信息', '16', '1', 'User/index', '0', '', '用户管理', '0');
 INSERT INTO `bbs_menu` VALUES ('18', '新增用户', '17', '0', 'User/add', '0', '添加新用户', '', '0');
-INSERT INTO `bbs_menu` VALUES ('19', '用户行为', '16', '0', 'User/action', '0', '', '行为管理', '0');
+INSERT INTO `bbs_menu` VALUES ('19', '用户行为', '16', '5', 'User/action', '0', '', '行为管理', '0');
 INSERT INTO `bbs_menu` VALUES ('20', '新增用户行为', '19', '0', 'User/addaction', '0', '', '', '0');
 INSERT INTO `bbs_menu` VALUES ('21', '编辑用户行为', '19', '0', 'User/editaction', '0', '', '', '0');
 INSERT INTO `bbs_menu` VALUES ('22', '保存用户行为', '19', '0', 'User/saveAction', '0', '\"用户->用户行为\"保存编辑和新增的用户行为', '', '0');
@@ -1045,7 +1182,7 @@ INSERT INTO `bbs_menu` VALUES ('23', '变更行为状态', '19', '0', 'User/setS
 INSERT INTO `bbs_menu` VALUES ('24', '禁用会员', '19', '0', 'User/changeStatus?method=forbidUser', '0', '\"用户->用户信息\"中的禁用', '', '0');
 INSERT INTO `bbs_menu` VALUES ('25', '启用会员', '19', '0', 'User/changeStatus?method=resumeUser', '0', '\"用户->用户信息\"中的启用', '', '0');
 INSERT INTO `bbs_menu` VALUES ('26', '删除会员', '19', '0', 'User/changeStatus?method=deleteUser', '0', '\"用户->用户信息\"中的删除', '', '0');
-INSERT INTO `bbs_menu` VALUES ('27', '权限管理', '16', '0', 'AuthManager/index', '0', '', '用户管理', '0');
+INSERT INTO `bbs_menu` VALUES ('27', '权限管理', '16', '2', 'AuthManager/index', '0', '', '用户管理', '0');
 INSERT INTO `bbs_menu` VALUES ('28', '删除', '27', '0', 'AuthManager/changeStatus?method=deleteGroup', '0', '删除用户组', '', '0');
 INSERT INTO `bbs_menu` VALUES ('29', '禁用', '27', '0', 'AuthManager/changeStatus?method=forbidGroup', '0', '禁用用户组', '', '0');
 INSERT INTO `bbs_menu` VALUES ('30', '恢复', '27', '0', 'AuthManager/changeStatus?method=resumeGroup', '0', '恢复已禁用的用户组', '', '0');
@@ -1115,9 +1252,9 @@ INSERT INTO `bbs_menu` VALUES ('96', '新增', '75', '0', 'Menu/add', '0', '', '
 INSERT INTO `bbs_menu` VALUES ('98', '编辑', '75', '0', 'Menu/edit', '0', '', '', '0');
 INSERT INTO `bbs_menu` VALUES ('104', '下载管理', '102', '0', 'Think/lists?model=download', '0', '', '', '0');
 INSERT INTO `bbs_menu` VALUES ('105', '配置管理', '102', '0', 'Think/lists?model=config', '0', '', '', '0');
-INSERT INTO `bbs_menu` VALUES ('106', '行为日志', '16', '0', 'Action/actionlog', '0', '', '行为管理', '0');
-INSERT INTO `bbs_menu` VALUES ('108', '修改密码', '16', '0', 'User/updatePassword', '1', '', '', '0');
-INSERT INTO `bbs_menu` VALUES ('109', '修改昵称', '16', '0', 'User/updateNickname', '1', '', '', '0');
+INSERT INTO `bbs_menu` VALUES ('106', '行为日志', '16', '6', 'Action/actionlog', '0', '', '行为管理', '0');
+INSERT INTO `bbs_menu` VALUES ('108', '修改密码', '16', '7', 'User/updatePassword', '1', '', '', '0');
+INSERT INTO `bbs_menu` VALUES ('109', '修改昵称', '16', '8', 'User/updateNickname', '1', '', '', '0');
 INSERT INTO `bbs_menu` VALUES ('110', '查看行为日志', '106', '0', 'action/edit', '1', '', '', '0');
 INSERT INTO `bbs_menu` VALUES ('112', '新增数据', '58', '0', 'think/add', '1', '', '', '0');
 INSERT INTO `bbs_menu` VALUES ('113', '编辑数据', '58', '0', 'think/edit', '1', '', '', '0');
@@ -1146,6 +1283,14 @@ INSERT INTO `bbs_menu` VALUES ('143', '文章列表', '129', '2', 'Home/Article/
 INSERT INTO `bbs_menu` VALUES ('144', '发表文章', '129', '3', 'Home/Article/publish', '0', '', '', '0');
 INSERT INTO `bbs_menu` VALUES ('146', '收藏列表', '130', '2', 'Home/UserCenter/collections', '0', '', '', '0');
 INSERT INTO `bbs_menu` VALUES ('145', '收藏功能', '129', '4', 'Home/Collection/collect', '0', '', '', '0');
+INSERT INTO `bbs_menu` VALUES ('147', '动态权限', '16', '3', 'DynamicAuth/index', '0', '', '用户管理', '0');
+INSERT INTO `bbs_menu` VALUES ('148', '申请权限', '147', '1', 'DynamicAuth/add', '0', '', '', '0');
+INSERT INTO `bbs_menu` VALUES ('149', '申请详情', '147', '2', 'DynamicAuth/detail', '0', '', '', '0');
+INSERT INTO `bbs_menu` VALUES ('150', '回收权限', '147', '3', 'DynamicAuth/recycle', '0', '', '', '0');
+INSERT INTO `bbs_menu` VALUES ('151', '权限转移', '16', '4', 'AuthTransfer/index', '0', '', '用户管理', '0');
+INSERT INTO `bbs_menu` VALUES ('152', '转移查看', '151', '0', 'AuthTransfer/transfer', '0', '', '', '0');
+INSERT INTO `bbs_menu` VALUES ('153', '权限详情', '151', '1', 'AuthTransfer/detail', '0', '', '', '0');
+INSERT INTO `bbs_menu` VALUES ('154', '转移操作', '151', '2', 'AuthTransfer/transferAuth', '0', '', '', '0');
 
 -- ----------------------------
 -- Table structure for bbs_model
@@ -1259,18 +1404,19 @@ CREATE TABLE `bbs_ucenter_member` (
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`),
   KEY `status` (`status`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='用户表';
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 -- ----------------------------
 -- Records of bbs_ucenter_member
 -- ----------------------------
-INSERT INTO `bbs_ucenter_member` VALUES ('1', 'admin', '', 'hfhui@qq.com', '', '1489332473', '0', '1493462543', '3085702124', '1489332473', '1');
-INSERT INTO `bbs_ucenter_member` VALUES ('2', 'hfhui', 'f1eeb2dc0003f38a39403af82a92e7b1', 'hfhui@gmain.com', '', '1489420276', '0', '1493439892', '0', '1489420276', '1');
-INSERT INTO `bbs_ucenter_member` VALUES ('3', 'abc', 'f1eeb2dc0003f38a39403af82a92e7b1', 'abc@qq.com', '', '1493305931', '0', '1493462593', '3085702124', '1493305931', '1');
+INSERT INTO `bbs_ucenter_member` VALUES ('1', 'admin', '', 'hfhui@qq.com', '', '1489332473', '0', '1495163348', '0', '1489332473', '1');
+INSERT INTO `bbs_ucenter_member` VALUES ('2', 'hfhui', 'f1eeb2dc0003f38a39403af82a92e7b1', 'hfhui@gmain.com', '', '1489420276', '0', '1495163374', '0', '1489420276', '1');
+INSERT INTO `bbs_ucenter_member` VALUES ('3', 'abc', 'f1eeb2dc0003f38a39403af82a92e7b1', 'abc@qq.com', '', '1493305931', '0', '1493306156', '0', '1493305931', '1');
 INSERT INTO `bbs_ucenter_member` VALUES ('4', 'abcd', 'f1eeb2dc0003f38a39403af82a92e7b1', 'abcd@qq.com', '', '1493305972', '0', '1493306137', '0', '1493305972', '1');
 INSERT INTO `bbs_ucenter_member` VALUES ('5', '123', 'f1eeb2dc0003f38a39403af82a92e7b1', '123@qq.com', '', '1493306417', '0', '1493306427', '0', '1493306417', '1');
 INSERT INTO `bbs_ucenter_member` VALUES ('6', '12345', 'f1eeb2dc0003f38a39403af82a92e7b1', '123456@qq.com', '', '1493306590', '0', '1493306701', '0', '1493306590', '1');
 INSERT INTO `bbs_ucenter_member` VALUES ('7', '1234', 'f1eeb2dc0003f38a39403af82a92e7b1', '1234@qq.com', '', '1493306740', '0', '1493306752', '0', '1493306740', '1');
+INSERT INTO `bbs_ucenter_member` VALUES ('8', 'test', 'f1eeb2dc0003f38a39403af82a92e7b1', 'test@qq.com', '', '1493703582', '0', '1495166087', '0', '1493703582', '1');
 
 -- ----------------------------
 -- Table structure for bbs_ucenter_setting
