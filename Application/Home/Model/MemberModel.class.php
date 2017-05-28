@@ -109,6 +109,7 @@ class MemberModel extends Model
             ->where(array('uid' => $usr_auth['uid']))
             ->field('nickname,sex,birthday,score,last_login_time,last_login_ip,reg_time')
             ->find();
+        $usr_info['last_login_ip'] = long2ip($usr_info['last_login_ip']);
         return $usr_info;
     }
 
